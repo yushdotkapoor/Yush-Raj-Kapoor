@@ -10,9 +10,9 @@ import Foundation
 
 struct project {
     var name:String
-    var subtitle:String
     var shortDescription:String
     var longDescription:String
+    var features:[String]
     var languages:[String]
     var startDate:String
     var endDate:String
@@ -23,9 +23,9 @@ struct project {
     
     
     init(name:String,
-         subtitle:String,
          shortDescription:String,
          longDescription:String,
+         features:[String],
          languages:[String],
          startDate:String,
          endDate:String,
@@ -34,9 +34,9 @@ struct project {
          challenges:[String],
          thumbnails:[String]) {
         self.name = name
-        self.subtitle = subtitle
         self.shortDescription = shortDescription
         self.longDescription = longDescription
+        self.features = features
         self.languages = languages
         self.startDate = startDate
         self.endDate = endDate

@@ -14,6 +14,8 @@
 		9D36568D26FFA76700BC4E6F /* ProjectsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D36568C26FFA76700BC4E6F /* ProjectsTableViewCell.swift */; };
 		9D36568F26FFAA6900BC4E6F /* ProjectsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D36568E26FFAA6900BC4E6F /* ProjectsData.swift */; };
 		9D36569126FFAB2500BC4E6F /* ProjectsStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D36569026FFAB2500BC4E6F /* ProjectsStruct.swift */; };
+		9D7C2A8627040FCF00F9B81E /* ProjectsLandingPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7C2A8527040FCF00F9B81E /* ProjectsLandingPage.swift */; };
+		9D7C2A8A270430A100F9B81E /* NSMutableAttributedStringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7C2A89270430A100F9B81E /* NSMutableAttributedStringExtension.swift */; };
 		9D91458326F0F02F00450F13 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D91458226F0F02F00450F13 /* AppDelegate.swift */; };
 		9D91458526F0F02F00450F13 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D91458426F0F02F00450F13 /* SceneDelegate.swift */; };
 		9D91458A26F0F02F00450F13 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D91458826F0F02F00450F13 /* Main.storyboard */; };
@@ -36,6 +38,8 @@
 		9D36568C26FFA76700BC4E6F /* ProjectsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectsTableViewCell.swift; sourceTree = "<group>"; };
 		9D36568E26FFAA6900BC4E6F /* ProjectsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectsData.swift; sourceTree = "<group>"; };
 		9D36569026FFAB2500BC4E6F /* ProjectsStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectsStruct.swift; sourceTree = "<group>"; };
+		9D7C2A8527040FCF00F9B81E /* ProjectsLandingPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectsLandingPage.swift; sourceTree = "<group>"; };
+		9D7C2A89270430A100F9B81E /* NSMutableAttributedStringExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSMutableAttributedStringExtension.swift; sourceTree = "<group>"; };
 		9D91457F26F0F02F00450F13 /* Yush Raj Kapoor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Yush Raj Kapoor.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D91458226F0F02F00450F13 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9D91458426F0F02F00450F13 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -63,14 +67,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		9D36567E26FFA16600BC4E6F /* PageVIewController */ = {
+		9D36567E26FFA16600BC4E6F /* PageViewController */ = {
 			isa = PBXGroup;
 			children = (
 				9D91459C26F14AB900450F13 /* IntroPageView.swift */,
 				9D91459E26F154A400450F13 /* Hello.swift */,
 				9D9145A026F1585200450F13 /* AboutMe.swift */,
 			);
-			name = PageVIewController;
+			name = PageViewController;
 			sourceTree = "<group>";
 		};
 		9D36568226FFA19000BC4E6F /* TabBarController */ = {
@@ -91,6 +95,7 @@
 				9D36568C26FFA76700BC4E6F /* ProjectsTableViewCell.swift */,
 				9D36568E26FFAA6900BC4E6F /* ProjectsData.swift */,
 				9D36569026FFAB2500BC4E6F /* ProjectsStruct.swift */,
+				9D7C2A8527040FCF00F9B81E /* ProjectsLandingPage.swift */,
 			);
 			name = Projects;
 			sourceTree = "<group>";
@@ -119,7 +124,7 @@
 				9D91458826F0F02F00450F13 /* Main.storyboard */,
 				9D91458B26F0F03200450F13 /* Assets.xcassets */,
 				9D91459826F0F5BC00450F13 /* MainScreen.swift */,
-				9D36567E26FFA16600BC4E6F /* PageVIewController */,
+				9D36567E26FFA16600BC4E6F /* PageViewController */,
 				9D36568226FFA19000BC4E6F /* TabBarController */,
 				9DB163FD26FD7307000F7E1C /* Helpers */,
 				9D91458D26F0F03200450F13 /* LaunchScreen.storyboard */,
@@ -134,6 +139,7 @@
 				9D91459A26F1416100450F13 /* global.swift */,
 				9DB163FE26FD731D000F7E1C /* UILabelExtension.swift */,
 				9DB1640026FD7332000F7E1C /* StringExtension.swift */,
+				9D7C2A89270430A100F9B81E /* NSMutableAttributedStringExtension.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -219,7 +225,9 @@
 				9D91458526F0F02F00450F13 /* SceneDelegate.swift in Sources */,
 				9D36568626FFA1D300BC4E6F /* Skills.swift in Sources */,
 				9D36568D26FFA76700BC4E6F /* ProjectsTableViewCell.swift in Sources */,
+				9D7C2A8627040FCF00F9B81E /* ProjectsLandingPage.swift in Sources */,
 				9D36568826FFA1DD00BC4E6F /* Hobbies.swift in Sources */,
+				9D7C2A8A270430A100F9B81E /* NSMutableAttributedStringExtension.swift in Sources */,
 				9D36568426FFA1B900BC4E6F /* Projects.swift in Sources */,
 				9DB163FF26FD731D000F7E1C /* UILabelExtension.swift in Sources */,
 				9D36569126FFAB2500BC4E6F /* ProjectsStruct.swift in Sources */,

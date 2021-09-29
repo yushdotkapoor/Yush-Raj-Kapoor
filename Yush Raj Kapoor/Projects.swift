@@ -7,23 +7,55 @@
 
 import UIKit
 
-class Projects: UIViewController {
+class Projects: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    
 
+    @IBOutlet weak var tableView: UITableView!
+    var data:[project]?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        data = ProjectsData().getProjects()
+        
+        tableView.delegate = self
+        tableView.dataSource = self
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "shell")
         // Do any additional setup after loading the view.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return data?.count ?? 0
     }
-    */
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as! ProjectsTableViewCell
+        let indexedCell = data?[indexPath.row]
+        cell.desc.text = indexedCell?.shortDescription
+        cell.titl.text = indexedCell?.name
+        cell.img.image = UIImage(named: indexedCell?.appIconName ?? "null")
+      
+        return cell
+    }
+    
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+       
+        let vc = UIStoryboard(name:"Main", bundle:nil).instantiateViewController(identifier: "ProjectsLandingPage") as! ProjectsLandingPage
+        
+        let indexedCell = data?[indexPath.row]
+        vc.textDesc = indexedCell?.longDescription
+        vc.textSkills = indexedCell?.skillsUsed
+        vc.textChallenges = indexedCell!.challenges
+        vc.textFeatures = indexedCell!.features
+        vc.textLanguages = indexedCell!.languages
+        vc.title = indexedCell?.name
+        navigationController?.pushViewController(vc, animated: true)
+        }
+    
+
+
 
 }

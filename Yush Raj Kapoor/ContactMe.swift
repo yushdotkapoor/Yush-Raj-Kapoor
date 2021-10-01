@@ -6,24 +6,57 @@
 //
 
 import UIKit
+import MessageUI
 
-class ContactMe: UIViewController {
+class ContactMe: UIViewController, MFMailComposeViewControllerDelegate {
 
+    @IBOutlet weak var img: UIImageView!
+    @IBOutlet weak var phoneImg: UIButton!
+    @IBOutlet weak var emailImg: UIButton!
+    @IBOutlet weak var gitImg: UIButton!
+    
+    var phoneNumber = "9169326283"
+    var emailAddress = "yushdotkapoor@gmail.com"
+    var instagramLink = "https://www.instagram.com/yushrajkapoor/"
+    var linkedinLink = "https://www.linkedin.com/in/yush-raj-kapoor"
+    var githubLink = "https://github.com/yushdotkapoor"
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        img.image = UIImage(named: "Headshot")
+        img.layer.cornerRadius = img.frame.height / 2
+        
+        var tag = "Light"
+        if traitCollection.userInterfaceStyle == .light {
+            tag = "Dark"
+        }
+        
+        gitImg.setImage(UIImage(named: "GitHub-\(tag)")!, for: .normal)
+        gitImg.tintColor = .label
+        emailImg.tintColor = .label
+        phoneImg.tintColor = .label
+        
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func phoneTapped(_ sender: Any) {
+        callPhoneNumber(number: phoneNumber)
     }
-    */
-
+    
+    @IBAction func emailTapped(_ sender: Any) {
+        sendEmail(sender: self, emailAddress: emailAddress)
+    }
+    
+    @IBAction func instagramTapped(_ sender: Any) {
+        goToLink(ur: instagramLink)
+    }
+    
+    @IBAction func linkedinTapped(_ sender: Any) {
+        goToLink(ur: linkedinLink)
+    }
+    
+    @IBAction func githubTapped(_ sender: Any) {
+        goToLink(ur: githubLink)
+    }
+    
+    
 }

@@ -51,6 +51,9 @@ class Projects: UIViewController, UITableViewDelegate, UITableViewDataSource {
         vc.textChallenges = indexedCell!.challenges
         vc.textFeatures = indexedCell!.features
         vc.textLanguages = indexedCell!.languages
+        vc.urls = indexedCell!.urls
+        vc.thumbs = indexedCell?.thumbnails ?? 0
+        vc.iconName = indexedCell?.appIconName
         vc.title = indexedCell?.name
         navigationController?.pushViewController(vc, animated: true)
         }

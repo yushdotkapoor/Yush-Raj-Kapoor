@@ -14,6 +14,7 @@
 		9D36568D26FFA76700BC4E6F /* ProjectsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D36568C26FFA76700BC4E6F /* ProjectsTableViewCell.swift */; };
 		9D36568F26FFAA6900BC4E6F /* ProjectsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D36568E26FFAA6900BC4E6F /* ProjectsData.swift */; };
 		9D36569126FFAB2500BC4E6F /* ProjectsStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D36569026FFAB2500BC4E6F /* ProjectsStruct.swift */; };
+		9D6049BA270645DF00CC524E /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D6049B9270645DF00CC524E /* UIImageExtension.swift */; };
 		9D7C2A8627040FCF00F9B81E /* ProjectsLandingPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7C2A8527040FCF00F9B81E /* ProjectsLandingPage.swift */; };
 		9D7C2A8A270430A100F9B81E /* NSMutableAttributedStringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7C2A89270430A100F9B81E /* NSMutableAttributedStringExtension.swift */; };
 		9D91458326F0F02F00450F13 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D91458226F0F02F00450F13 /* AppDelegate.swift */; };
@@ -26,6 +27,9 @@
 		9D91459D26F14AB900450F13 /* IntroPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D91459C26F14AB900450F13 /* IntroPageView.swift */; };
 		9D91459F26F154A400450F13 /* Hello.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D91459E26F154A400450F13 /* Hello.swift */; };
 		9D9145A126F1585200450F13 /* AboutMe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D9145A026F1585200450F13 /* AboutMe.swift */; };
+		9D9F36302706681A00F81EA9 /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D9F362F2706681A00F81EA9 /* UIViewControllerExtension.swift */; };
+		9D9F36322706683600F81EA9 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D9F36312706683600F81EA9 /* UIViewExtension.swift */; };
+		9D9F3634270693CB00F81EA9 /* PersonalInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D9F3633270693CB00F81EA9 /* PersonalInfo.swift */; };
 		9DB163FF26FD731D000F7E1C /* UILabelExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DB163FE26FD731D000F7E1C /* UILabelExtension.swift */; };
 		9DB1640126FD7332000F7E1C /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DB1640026FD7332000F7E1C /* StringExtension.swift */; };
 /* End PBXBuildFile section */
@@ -38,6 +42,7 @@
 		9D36568C26FFA76700BC4E6F /* ProjectsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectsTableViewCell.swift; sourceTree = "<group>"; };
 		9D36568E26FFAA6900BC4E6F /* ProjectsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectsData.swift; sourceTree = "<group>"; };
 		9D36569026FFAB2500BC4E6F /* ProjectsStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectsStruct.swift; sourceTree = "<group>"; };
+		9D6049B9270645DF00CC524E /* UIImageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageExtension.swift; sourceTree = "<group>"; };
 		9D7C2A8527040FCF00F9B81E /* ProjectsLandingPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectsLandingPage.swift; sourceTree = "<group>"; };
 		9D7C2A89270430A100F9B81E /* NSMutableAttributedStringExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSMutableAttributedStringExtension.swift; sourceTree = "<group>"; };
 		9D91457F26F0F02F00450F13 /* Yush Raj Kapoor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Yush Raj Kapoor.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -52,6 +57,9 @@
 		9D91459C26F14AB900450F13 /* IntroPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroPageView.swift; sourceTree = "<group>"; };
 		9D91459E26F154A400450F13 /* Hello.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hello.swift; sourceTree = "<group>"; };
 		9D9145A026F1585200450F13 /* AboutMe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutMe.swift; sourceTree = "<group>"; };
+		9D9F362F2706681A00F81EA9 /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
+		9D9F36312706683600F81EA9 /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
+		9D9F3633270693CB00F81EA9 /* PersonalInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalInfo.swift; sourceTree = "<group>"; };
 		9DB163FE26FD731D000F7E1C /* UILabelExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabelExtension.swift; sourceTree = "<group>"; };
 		9DB1640026FD7332000F7E1C /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -73,6 +81,7 @@
 				9D91459C26F14AB900450F13 /* IntroPageView.swift */,
 				9D91459E26F154A400450F13 /* Hello.swift */,
 				9D9145A026F1585200450F13 /* AboutMe.swift */,
+				9D9F3633270693CB00F81EA9 /* PersonalInfo.swift */,
 			);
 			name = PageViewController;
 			sourceTree = "<group>";
@@ -83,7 +92,7 @@
 				9D36568B26FFA74A00BC4E6F /* Projects */,
 				9D36568526FFA1D300BC4E6F /* Skills.swift */,
 				9D36568726FFA1DD00BC4E6F /* Hobbies.swift */,
-				9D36568926FFA1EB00BC4E6F /* ContactMe.swift */,
+				9D6049BB270646E900CC524E /* ContactMe */,
 			);
 			name = TabBarController;
 			sourceTree = "<group>";
@@ -98,6 +107,14 @@
 				9D7C2A8527040FCF00F9B81E /* ProjectsLandingPage.swift */,
 			);
 			name = Projects;
+			sourceTree = "<group>";
+		};
+		9D6049BB270646E900CC524E /* ContactMe */ = {
+			isa = PBXGroup;
+			children = (
+				9D36568926FFA1EB00BC4E6F /* ContactMe.swift */,
+			);
+			name = ContactMe;
 			sourceTree = "<group>";
 		};
 		9D91457626F0F02F00450F13 = {
@@ -140,6 +157,9 @@
 				9DB163FE26FD731D000F7E1C /* UILabelExtension.swift */,
 				9DB1640026FD7332000F7E1C /* StringExtension.swift */,
 				9D7C2A89270430A100F9B81E /* NSMutableAttributedStringExtension.swift */,
+				9D6049B9270645DF00CC524E /* UIImageExtension.swift */,
+				9D9F362F2706681A00F81EA9 /* UIViewControllerExtension.swift */,
+				9D9F36312706683600F81EA9 /* UIViewExtension.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -226,10 +246,14 @@
 				9D36568626FFA1D300BC4E6F /* Skills.swift in Sources */,
 				9D36568D26FFA76700BC4E6F /* ProjectsTableViewCell.swift in Sources */,
 				9D7C2A8627040FCF00F9B81E /* ProjectsLandingPage.swift in Sources */,
+				9D9F36302706681A00F81EA9 /* UIViewControllerExtension.swift in Sources */,
 				9D36568826FFA1DD00BC4E6F /* Hobbies.swift in Sources */,
+				9D6049BA270645DF00CC524E /* UIImageExtension.swift in Sources */,
+				9D9F3634270693CB00F81EA9 /* PersonalInfo.swift in Sources */,
 				9D7C2A8A270430A100F9B81E /* NSMutableAttributedStringExtension.swift in Sources */,
 				9D36568426FFA1B900BC4E6F /* Projects.swift in Sources */,
 				9DB163FF26FD731D000F7E1C /* UILabelExtension.swift in Sources */,
+				9D9F36322706683600F81EA9 /* UIViewExtension.swift in Sources */,
 				9D36569126FFAB2500BC4E6F /* ProjectsStruct.swift in Sources */,
 				9D91459B26F1416100450F13 /* global.swift in Sources */,
 			);

@@ -19,7 +19,8 @@ struct project {
     var appIconName:String
     var skillsUsed:[String:String]
     var challenges:[String]
-    var thumbnails:[String]
+    var thumbnails:Int
+    var urls:[String:String]
     
     
     init(name:String,
@@ -32,7 +33,8 @@ struct project {
          appIconName:String,
          skillsUsed:[String:String],
          challenges:[String],
-         thumbnails:[String]) {
+         thumbnails:Int,
+         urls:[String:String]) {
         self.name = name
         self.shortDescription = shortDescription
         self.longDescription = longDescription
@@ -44,7 +46,6 @@ struct project {
         self.skillsUsed = skillsUsed
         self.challenges = challenges
         self.thumbnails = thumbnails
+        self.urls = urls
     }
-    
-    
 }

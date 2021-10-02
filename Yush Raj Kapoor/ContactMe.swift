@@ -9,17 +9,13 @@ import UIKit
 import MessageUI
 
 class ContactMe: UIViewController, MFMailComposeViewControllerDelegate {
-
+    
     @IBOutlet weak var img: UIImageView!
     @IBOutlet weak var phoneImg: UIButton!
     @IBOutlet weak var emailImg: UIButton!
     @IBOutlet weak var gitImg: UIButton!
     
-    var phoneNumber = "9169326283"
-    var emailAddress = "yushdotkapoor@gmail.com"
-    var instagramLink = "https://www.instagram.com/yushrajkapoor/"
-    var linkedinLink = "https://www.linkedin.com/in/yush-raj-kapoor"
-    var githubLink = "https://github.com/yushdotkapoor"
+    let personalInfo = PersonalInfo()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,23 +35,23 @@ class ContactMe: UIViewController, MFMailComposeViewControllerDelegate {
     }
     
     @IBAction func phoneTapped(_ sender: Any) {
-        callPhoneNumber(number: phoneNumber)
+        callPhoneNumber(number: personalInfo.phoneNumber)
     }
     
     @IBAction func emailTapped(_ sender: Any) {
-        sendEmail(sender: self, emailAddress: emailAddress)
+        sendEmail(sender: self, emailAddress: personalInfo.emailAddress)
     }
     
     @IBAction func instagramTapped(_ sender: Any) {
-        goToLink(ur: instagramLink)
+        goToLink(ur: personalInfo.instagramLink)
     }
     
     @IBAction func linkedinTapped(_ sender: Any) {
-        goToLink(ur: linkedinLink)
+        goToLink(ur: personalInfo.linkedinLink)
     }
     
     @IBAction func githubTapped(_ sender: Any) {
-        goToLink(ur: githubLink)
+        goToLink(ur: personalInfo.githubLink)
     }
     
     

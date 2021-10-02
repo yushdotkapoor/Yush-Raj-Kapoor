@@ -32,6 +32,8 @@
 		9D9F3634270693CB00F81EA9 /* PersonalInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D9F3633270693CB00F81EA9 /* PersonalInfo.swift */; };
 		9DB163FF26FD731D000F7E1C /* UILabelExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DB163FE26FD731D000F7E1C /* UILabelExtension.swift */; };
 		9DB1640126FD7332000F7E1C /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DB1640026FD7332000F7E1C /* StringExtension.swift */; };
+		9DC9BCE62707783C00875B89 /* SkillsStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC9BCE52707783C00875B89 /* SkillsStruct.swift */; };
+		9DC9BCE827077A6200875B89 /* SkillsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC9BCE727077A6200875B89 /* SkillsData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -62,6 +64,8 @@
 		9D9F3633270693CB00F81EA9 /* PersonalInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalInfo.swift; sourceTree = "<group>"; };
 		9DB163FE26FD731D000F7E1C /* UILabelExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabelExtension.swift; sourceTree = "<group>"; };
 		9DB1640026FD7332000F7E1C /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
+		9DC9BCE52707783C00875B89 /* SkillsStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillsStruct.swift; sourceTree = "<group>"; };
+		9DC9BCE727077A6200875B89 /* SkillsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillsData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,8 +94,8 @@
 			isa = PBXGroup;
 			children = (
 				9D36568B26FFA74A00BC4E6F /* Projects */,
-				9D36568526FFA1D300BC4E6F /* Skills.swift */,
-				9D36568726FFA1DD00BC4E6F /* Hobbies.swift */,
+				9DC9BCE42706C5A800875B89 /* Skills */,
+				9DC9BCE92707B0F500875B89 /* Hobbies */,
 				9D6049BB270646E900CC524E /* ContactMe */,
 			);
 			name = TabBarController;
@@ -162,6 +166,24 @@
 				9D9F36312706683600F81EA9 /* UIViewExtension.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		9DC9BCE42706C5A800875B89 /* Skills */ = {
+			isa = PBXGroup;
+			children = (
+				9D36568526FFA1D300BC4E6F /* Skills.swift */,
+				9DC9BCE52707783C00875B89 /* SkillsStruct.swift */,
+				9DC9BCE727077A6200875B89 /* SkillsData.swift */,
+			);
+			name = Skills;
+			sourceTree = "<group>";
+		};
+		9DC9BCE92707B0F500875B89 /* Hobbies */ = {
+			isa = PBXGroup;
+			children = (
+				9D36568726FFA1DD00BC4E6F /* Hobbies.swift */,
+			);
+			name = Hobbies;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -237,6 +259,7 @@
 				9D91458326F0F02F00450F13 /* AppDelegate.swift in Sources */,
 				9D36568A26FFA1EB00BC4E6F /* ContactMe.swift in Sources */,
 				9D36568F26FFAA6900BC4E6F /* ProjectsData.swift in Sources */,
+				9DC9BCE62707783C00875B89 /* SkillsStruct.swift in Sources */,
 				9D91459926F0F5BC00450F13 /* MainScreen.swift in Sources */,
 				9DB1640126FD7332000F7E1C /* StringExtension.swift in Sources */,
 				9D91459D26F14AB900450F13 /* IntroPageView.swift in Sources */,
@@ -248,6 +271,7 @@
 				9D7C2A8627040FCF00F9B81E /* ProjectsLandingPage.swift in Sources */,
 				9D9F36302706681A00F81EA9 /* UIViewControllerExtension.swift in Sources */,
 				9D36568826FFA1DD00BC4E6F /* Hobbies.swift in Sources */,
+				9DC9BCE827077A6200875B89 /* SkillsData.swift in Sources */,
 				9D6049BA270645DF00CC524E /* UIImageExtension.swift in Sources */,
 				9D9F3634270693CB00F81EA9 /* PersonalInfo.swift in Sources */,
 				9D7C2A8A270430A100F9B81E /* NSMutableAttributedStringExtension.swift in Sources */,

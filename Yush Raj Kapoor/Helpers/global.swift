@@ -27,12 +27,20 @@ func goToLink(ur:String) {
 //calls a phone number
 func callPhoneNumber(number: String) {
     guard let url = URL(string: "telprompt://\(number)"),
-        UIApplication.shared.canOpenURL(url) else {
+          UIApplication.shared.canOpenURL(url) else {
         return
     }
     UIApplication.shared.open(url, options: [:], completionHandler: nil)
 }
 
-//send emails
+
+func formatBullets(arr:[String]) -> String {
+    var str = ""
+    for a in arr {
+        let formatted = " • \(a)\n"
+        str.append(formatted)
+    }
+    return str
+}
 
 

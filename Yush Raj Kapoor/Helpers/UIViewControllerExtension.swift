@@ -31,12 +31,12 @@ extension UIViewController {
         let RightColor = CGColor(gray: rightGradientColor, alpha: 1)
         var colorArray = [CGColor(gray: 1/2, alpha: 1)]
         switch page {
-            case 1:
-                colorArray.insert(leftColor, at: 0)
-                break
-            case 2:
-                colorArray.append(RightColor)
-            default:
+        case 1:
+            colorArray.insert(leftColor, at: 0)
+            break
+        case 2:
+            colorArray.append(RightColor)
+        default:
             break
         }
         
@@ -49,7 +49,7 @@ extension UIViewController {
         view.layer.addSublayer(gradient)
         
     }
-
+    
     //for sending emails
     func sendEmail(sender: MFMailComposeViewControllerDelegate, emailAddress:String) {
         if MFMailComposeViewController.canSendMail() {
@@ -62,7 +62,7 @@ extension UIViewController {
             // show failure alert
         }
     }
-
+    
     @objc(mailComposeController:didFinishWithResult:error:) func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
         controller.dismiss(animated: true)
     }

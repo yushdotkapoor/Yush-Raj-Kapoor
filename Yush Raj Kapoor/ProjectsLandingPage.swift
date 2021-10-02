@@ -8,7 +8,7 @@
 import UIKit
 
 class ProjectsLandingPage: UIViewController {
-
+    
     @IBOutlet weak var desc: UILabel!
     @IBOutlet weak var skills: UILabel!
     @IBOutlet weak var challenges: UILabel!
@@ -53,7 +53,7 @@ class ProjectsLandingPage: UIViewController {
             
             let img = UIImageView(frame: CGRect(x: width * CGFloat(ct - 1), y: 0, width: width, height: height))
             img.image = uiimage?.resize(targetSize: CGSize(width: width, height: height))
-           
+            
             if height > maxHeight {
                 maxHeight = height
             }
@@ -106,15 +106,6 @@ class ProjectsLandingPage: UIViewController {
         let attributes = [NSAttributedString.Key.font: font]
         navigationController?.navigationBar.largeTitleTextAttributes = attributes
     }
- 
-    func formatBullets(arr:[String]) -> String {
-        var str = ""
-        for a in arr {
-            let formatted = " • \(a)\n"
-            str.append(formatted)
-        }
-        return str
-    }
     
     func formatSkills() -> NSMutableAttributedString {
         var str = NSMutableAttributedString()
@@ -125,5 +116,5 @@ class ProjectsLandingPage: UIViewController {
         }
         return str
     }
-
+    
 }

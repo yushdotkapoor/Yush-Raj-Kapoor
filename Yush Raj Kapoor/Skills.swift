@@ -8,22 +8,60 @@
 import UIKit
 
 class Skills: UIViewController {
-
+    
+    @IBOutlet weak var scrollView: UIScrollView!
+    @IBOutlet weak var stackView: UIStackView!
+    
+    var skills = SkillsData().getSkills()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        setUpLabels()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func setUpLabels() {
+        stackView.spacing = 15
+        stackView.widthAnchor.constraint(equalToConstant: UIScreen.main.bounds.width - 40).isActive = true
+        stackView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20).isActive = true
+        for skill in skills {
+            let stack = UIStackView()
+            stack.axis = .vertical
+            
+            let nameLbl = initLabels(skillAttribute: skill.name, size: 30)
+            let subLbl = initLabels(skillAttribute: skill.subunits)
+            let expLbl = initLabels(skillAttribute: skill.experience, size: 12, color: .secondaryLabel)
+            let spacer = initLabels(skillAttribute: " ", size: 8)
+            
+            let attributeLbl = [nameLbl, expLbl, spacer, subLbl]
+            for attribute in attributeLbl {
+                stack.addArrangedSubview(attribute)
+                attribute.leadingAnchor.constraint(equalTo: stack.leadingAnchor, constant: 20).isActive = true
+                attribute.trailingAnchor.constraint(equalTo: stack.trailingAnchor, constant: -20).isActive = true
+            }
+            nameLbl.topAnchor.constraint(equalTo: stack.topAnchor, constant: 17).isActive = true
+            
+            stack.backgroundColor = .secondarySystemBackground
+            stack.layer.cornerRadius = 20
+            stackView.addArrangedSubview(stack)
+        }
+        stackView.addArrangedSubview(UIView(frame: CGRect(x: 0, y: 0, width: CGFloat(), height: 10)))
     }
-    */
-
+    
+    func initLabels(skillAttribute:String, size:CGFloat, color:UIColor=UIColor.label) -> UILabel {
+        
+        let label = UILabel()
+        label.numberOfLines = 0
+        label.font = UIFont(name: "Helvetica", size: size)
+        label.textColor = color
+        label.text = skillAttribute
+        return label
+    }
+    
+    func initLabels(skillAttribute:[String]) -> UILabel {
+        let label = UILabel()
+        label.numberOfLines = 0
+        label.text = formatBullets(arr: skillAttribute)
+        return label
+    }
+    
 }

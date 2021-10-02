@@ -16,8 +16,14 @@ class ProjectsTableViewCell: UITableViewCell {
         super.awakeFromNib()
         // Initialization code
         img.layer.cornerRadius = img.frame.height/4
+        backgroundColor = .secondarySystemBackground
+        //backgroundView?.backgroundColor = .secondarySystemBackground
+        layer.cornerRadius = 20
+        
     }
-
+    
+  
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 

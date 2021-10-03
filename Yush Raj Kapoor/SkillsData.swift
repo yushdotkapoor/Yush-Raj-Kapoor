@@ -10,8 +10,8 @@ import UIKit
 
 class SkillsData {
     
-    var xcode = skill(name: "Xcode", subunits: ["App deployment", "MVC/MVMM", "SPM", "Cocoapods", "Push Notifications"], experience: "2 years of experience")
-    var swift = skill(name: "Swift", subunits: ["Photo and Video capture", "AVKit", "AVFoundation", "Music handling", "SiriKit", "ARKit", "CoreMotion", "StoreKit", "Haptics", "AudioKit", "MessageKit", "Firebase"], experience: "2 years of experience")
+    var xcode = skill(name: "Xcode", subunits: ["App development/deployment", "MVC/MVMM", "SPM", "Cocoapods", "Push Notifications"], experience: "2 years of experience")
+    var swift = skill(name: "Swift", subunits: ["Photo and Video capture", "AVKit", "AVFoundation", "Music handling", "SiriKit", "ARKit", "CoreMotion", "CoreLocation", "StoreKit", "Haptics", "AudioKit", "MessageKit", "Firebase"], experience: "2 years of experience")
     var firebase = skill(name: "Firebase", subunits: ["Integrations with JavaScript, Swift, Python, AppsScript, and HTML", "Firebase Cloud Messaging (Push Notification)", "Realtime Database", "Performance monitoring", "Analytics monitoring", "App distribution"], experience: "2 years of experience")
     var aws = skill(name: "AWS Lambda", subunits: ["Python script on a trigger"], experience: "")
     var html = skill(name: "HTML", subunits: ["Basic forms", "Firebase"], experience: "6 months of experience")

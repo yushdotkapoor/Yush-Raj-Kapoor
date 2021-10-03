@@ -33,10 +33,12 @@ func callPhoneNumber(number: String) {
     UIApplication.shared.open(url, options: [:], completionHandler: nil)
 }
 
-
+//formats a string array to a singular string as a bulleted list
 func formatBullets(arr:[String]) -> String {
+    var bulletArray = arr
+    bulletArray.sort()
     var str = ""
-    for a in arr {
+    for a in bulletArray {
         let formatted = " • \(a)\n"
         str.append(formatted)
     }

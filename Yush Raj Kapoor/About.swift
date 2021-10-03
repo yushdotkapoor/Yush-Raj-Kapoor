@@ -7,7 +7,7 @@
 
 import UIKit
 
-class Hobbies: UIViewController {
+class About: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

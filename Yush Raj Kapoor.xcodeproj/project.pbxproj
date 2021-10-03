@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		9D36568426FFA1B900BC4E6F /* Projects.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D36568326FFA1B900BC4E6F /* Projects.swift */; };
 		9D36568626FFA1D300BC4E6F /* Skills.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D36568526FFA1D300BC4E6F /* Skills.swift */; };
-		9D36568826FFA1DD00BC4E6F /* Hobbies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D36568726FFA1DD00BC4E6F /* Hobbies.swift */; };
 		9D36568A26FFA1EB00BC4E6F /* ContactMe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D36568926FFA1EB00BC4E6F /* ContactMe.swift */; };
 		9D36568D26FFA76700BC4E6F /* ProjectsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D36568C26FFA76700BC4E6F /* ProjectsTableViewCell.swift */; };
 		9D36568F26FFAA6900BC4E6F /* ProjectsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D36568E26FFAA6900BC4E6F /* ProjectsData.swift */; };
@@ -34,12 +33,14 @@
 		9DB1640126FD7332000F7E1C /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DB1640026FD7332000F7E1C /* StringExtension.swift */; };
 		9DC9BCE62707783C00875B89 /* SkillsStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC9BCE52707783C00875B89 /* SkillsStruct.swift */; };
 		9DC9BCE827077A6200875B89 /* SkillsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC9BCE727077A6200875B89 /* SkillsData.swift */; };
+		9DC9BCEE2708022F00875B89 /* AboutStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC9BCEC2708022F00875B89 /* AboutStruct.swift */; };
+		9DC9BCEF2708022F00875B89 /* About.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC9BCED2708022F00875B89 /* About.swift */; };
+		9DC9BCF127095BF100875B89 /* AboutData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC9BCF027095BF100875B89 /* AboutData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		9D36568326FFA1B900BC4E6F /* Projects.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Projects.swift; sourceTree = "<group>"; };
 		9D36568526FFA1D300BC4E6F /* Skills.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Skills.swift; sourceTree = "<group>"; };
-		9D36568726FFA1DD00BC4E6F /* Hobbies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hobbies.swift; sourceTree = "<group>"; };
 		9D36568926FFA1EB00BC4E6F /* ContactMe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactMe.swift; sourceTree = "<group>"; };
 		9D36568C26FFA76700BC4E6F /* ProjectsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectsTableViewCell.swift; sourceTree = "<group>"; };
 		9D36568E26FFAA6900BC4E6F /* ProjectsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectsData.swift; sourceTree = "<group>"; };
@@ -66,6 +67,9 @@
 		9DB1640026FD7332000F7E1C /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		9DC9BCE52707783C00875B89 /* SkillsStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillsStruct.swift; sourceTree = "<group>"; };
 		9DC9BCE727077A6200875B89 /* SkillsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillsData.swift; sourceTree = "<group>"; };
+		9DC9BCEC2708022F00875B89 /* AboutStruct.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutStruct.swift; sourceTree = "<group>"; };
+		9DC9BCED2708022F00875B89 /* About.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = About.swift; sourceTree = "<group>"; };
+		9DC9BCF027095BF100875B89 /* AboutData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,7 +99,7 @@
 			children = (
 				9D36568B26FFA74A00BC4E6F /* Projects */,
 				9DC9BCE42706C5A800875B89 /* Skills */,
-				9DC9BCE92707B0F500875B89 /* Hobbies */,
+				9DC9BCE92707B0F500875B89 /* About */,
 				9D6049BB270646E900CC524E /* ContactMe */,
 			);
 			name = TabBarController;
@@ -178,12 +182,14 @@
 			name = Skills;
 			sourceTree = "<group>";
 		};
-		9DC9BCE92707B0F500875B89 /* Hobbies */ = {
+		9DC9BCE92707B0F500875B89 /* About */ = {
 			isa = PBXGroup;
 			children = (
-				9D36568726FFA1DD00BC4E6F /* Hobbies.swift */,
+				9DC9BCED2708022F00875B89 /* About.swift */,
+				9DC9BCEC2708022F00875B89 /* AboutStruct.swift */,
+				9DC9BCF027095BF100875B89 /* AboutData.swift */,
 			);
-			name = Hobbies;
+			name = About;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -265,12 +271,13 @@
 				9D91459D26F14AB900450F13 /* IntroPageView.swift in Sources */,
 				9D91459F26F154A400450F13 /* Hello.swift in Sources */,
 				9D9145A126F1585200450F13 /* AboutMe.swift in Sources */,
+				9DC9BCEE2708022F00875B89 /* AboutStruct.swift in Sources */,
 				9D91458526F0F02F00450F13 /* SceneDelegate.swift in Sources */,
 				9D36568626FFA1D300BC4E6F /* Skills.swift in Sources */,
 				9D36568D26FFA76700BC4E6F /* ProjectsTableViewCell.swift in Sources */,
 				9D7C2A8627040FCF00F9B81E /* ProjectsLandingPage.swift in Sources */,
 				9D9F36302706681A00F81EA9 /* UIViewControllerExtension.swift in Sources */,
-				9D36568826FFA1DD00BC4E6F /* Hobbies.swift in Sources */,
+				9DC9BCEF2708022F00875B89 /* About.swift in Sources */,
 				9DC9BCE827077A6200875B89 /* SkillsData.swift in Sources */,
 				9D6049BA270645DF00CC524E /* UIImageExtension.swift in Sources */,
 				9D9F3634270693CB00F81EA9 /* PersonalInfo.swift in Sources */,
@@ -280,6 +287,7 @@
 				9D9F36322706683600F81EA9 /* UIViewExtension.swift in Sources */,
 				9D36569126FFAB2500BC4E6F /* ProjectsStruct.swift in Sources */,
 				9D91459B26F1416100450F13 /* global.swift in Sources */,
+				9DC9BCF127095BF100875B89 /* AboutData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

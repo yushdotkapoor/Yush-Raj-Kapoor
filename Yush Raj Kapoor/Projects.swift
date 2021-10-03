@@ -22,6 +22,7 @@ class Projects: UIViewController, UITableViewDelegate, UITableViewDataSource {
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "buffer")
+        tableView.layer.masksToBounds = false
     }
     
     //Using multiple sections to make a spacing between the cells
@@ -34,7 +35,7 @@ class Projects: UIViewController, UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 15
+        return 20
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
@@ -56,7 +57,7 @@ class Projects: UIViewController, UITableViewDelegate, UITableViewDataSource {
         let indexedCell = data?[indexPath.section]
         cell.desc.text = indexedCell?.shortDescription
         cell.titl.text = indexedCell?.name
-        cell.img.image = UIImage(named: indexedCell?.appIconName ?? "null")
+        cell.img = UIImage(named: indexedCell?.appIconName ?? "null")
         return cell
     }
     

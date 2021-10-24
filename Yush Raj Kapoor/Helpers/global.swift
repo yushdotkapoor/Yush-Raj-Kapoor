@@ -38,11 +38,31 @@ func formatBullets(arr:[String]) -> String {
     var bulletArray = arr
     bulletArray.sort()
     var str = ""
-    for a in bulletArray {
-        let formatted = " • \(a)\n"
+    for (i, a) in bulletArray.enumerated() {
+        var formatted = " • \(a)"
+        if (i+1) != bulletArray.count {
+            formatted += "\n"
+        }
         str.append(formatted)
     }
     return str
+}
+
+//initializes label with many properties to save space
+func initLabel(textLbl:String="", size:CGFloat=17, color:UIColor=UIColor.label, textAlignment:NSTextAlignment=NSTextAlignment.left) -> UILabel {
+    let label = UILabel()
+    label.numberOfLines = 0
+    label.textAlignment = textAlignment
+    label.font = label.font.withSize(size)
+    label.textColor = color
+    label.text = textLbl
+    return label
+}
+
+//initializes label with an array to form bullet point style text
+func initLabel(textLbls:[String], size:CGFloat=17, color:UIColor=UIColor.label, textAlignment:NSTextAlignment=NSTextAlignment.left) -> UILabel {
+    let text = formatBullets(arr: textLbls)
+    return initLabel(textLbl: text, size: size, color: color, textAlignment: textAlignment)
 }
 
 

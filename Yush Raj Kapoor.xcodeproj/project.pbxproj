@@ -36,6 +36,8 @@
 		9DC9BCEE2708022F00875B89 /* AboutStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC9BCEC2708022F00875B89 /* AboutStruct.swift */; };
 		9DC9BCEF2708022F00875B89 /* About.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC9BCED2708022F00875B89 /* About.swift */; };
 		9DC9BCF127095BF100875B89 /* AboutData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC9BCF027095BF100875B89 /* AboutData.swift */; };
+		9DFA7A6E27252EF9004009EA /* UIStackViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DFA7A6D27252EF9004009EA /* UIStackViewExtension.swift */; };
+		9DFA7A7227252F56004009EA /* ArrayExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DFA7A7127252F56004009EA /* ArrayExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -70,6 +72,8 @@
 		9DC9BCEC2708022F00875B89 /* AboutStruct.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutStruct.swift; sourceTree = "<group>"; };
 		9DC9BCED2708022F00875B89 /* About.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = About.swift; sourceTree = "<group>"; };
 		9DC9BCF027095BF100875B89 /* AboutData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutData.swift; sourceTree = "<group>"; };
+		9DFA7A6D27252EF9004009EA /* UIStackViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIStackViewExtension.swift; sourceTree = "<group>"; };
+		9DFA7A7127252F56004009EA /* ArrayExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -168,6 +172,8 @@
 				9D6049B9270645DF00CC524E /* UIImageExtension.swift */,
 				9D9F362F2706681A00F81EA9 /* UIViewControllerExtension.swift */,
 				9D9F36312706683600F81EA9 /* UIViewExtension.swift */,
+				9DFA7A6D27252EF9004009EA /* UIStackViewExtension.swift */,
+				9DFA7A7127252F56004009EA /* ArrayExtension.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -269,9 +275,11 @@
 				9D91459926F0F5BC00450F13 /* MainScreen.swift in Sources */,
 				9DB1640126FD7332000F7E1C /* StringExtension.swift in Sources */,
 				9D91459D26F14AB900450F13 /* IntroPageView.swift in Sources */,
+				9DFA7A6E27252EF9004009EA /* UIStackViewExtension.swift in Sources */,
 				9D91459F26F154A400450F13 /* Hello.swift in Sources */,
 				9D9145A126F1585200450F13 /* AboutMe.swift in Sources */,
 				9DC9BCEE2708022F00875B89 /* AboutStruct.swift in Sources */,
+				9DFA7A7227252F56004009EA /* ArrayExtension.swift in Sources */,
 				9D91458526F0F02F00450F13 /* SceneDelegate.swift in Sources */,
 				9D36568626FFA1D300BC4E6F /* Skills.swift in Sources */,
 				9D36568D26FFA76700BC4E6F /* ProjectsTableViewCell.swift in Sources */,

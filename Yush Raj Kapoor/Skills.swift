@@ -29,18 +29,20 @@ class Skills: UIViewController {
             let stack = UIStackView()
             stack.axis = .vertical
             
-            let nameLbl = initLabels(skillAttribute: skill.name, size: 30)
-            let subLbl = initLabels(skillAttribute: skill.subunits)
-            let expLbl = initLabels(skillAttribute: skill.experience, size: 12, color: .secondaryLabel)
-            let spacer = initLabels(skillAttribute: " ", size: 8)
+            let nameLbl = initLabel(textLbl: skill.name, size: 30)
+            let subLbl = initLabel(textLbls: skill.subunits)
+            let expLbl = initLabel(textLbl: skill.experience, size: 12, color: .secondaryLabel)
+            let spacer = initLabel(textLbl: " ", size: 8)
+            let buffer = initLabel(textLbl: " ", size: 17.5)
             
-            let attributeLbl = [nameLbl, expLbl, spacer, subLbl]
+            let attributeLbl = [nameLbl, expLbl, spacer, subLbl, buffer]
             for attribute in attributeLbl {
                 stack.addArrangedSubview(attribute)
                 attribute.leadingAnchor.constraint(equalTo: stack.leadingAnchor, constant: 20).isActive = true
                 attribute.trailingAnchor.constraint(equalTo: stack.trailingAnchor, constant: -20).isActive = true
             }
             nameLbl.topAnchor.constraint(equalTo: stack.topAnchor, constant: 17.5).isActive = true
+            subLbl.bottomAnchor.constraint(equalTo: stack.bottomAnchor, constant: -17.5).isActive = true
             
             stack.backgroundColor = .secondarySystemBackground
             stack.layer.cornerRadius = 20
@@ -55,23 +57,6 @@ class Skills: UIViewController {
     
     func addSpacer() {
         stackView.addArrangedSubview(UIView(frame: CGRect(x: 0, y: 0, width: CGFloat(), height: 10)))
-    }
-    
-    func initLabels(skillAttribute:String, size:CGFloat, color:UIColor=UIColor.label) -> UILabel {
-        
-        let label = UILabel()
-        label.numberOfLines = 0
-        label.font = UIFont(name: "Helvetica", size: size)
-        label.textColor = color
-        label.text = skillAttribute
-        return label
-    }
-    
-    func initLabels(skillAttribute:[String]) -> UILabel {
-        let label = UILabel()
-        label.numberOfLines = 0
-        label.text = formatBullets(arr: skillAttribute)
-        return label
     }
     
 }

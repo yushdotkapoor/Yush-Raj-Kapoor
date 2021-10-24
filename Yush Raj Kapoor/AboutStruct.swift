@@ -56,17 +56,19 @@ struct school {
     var state:String
     var graduationYear:String
     var GPA:String
+    var subjects:[String]
 
     init(name:String,
          city:String,
          state:String,
          graduationYear:String,
-         GPA:String) {
+         GPA:String, subjects:[String] = []) {
         self.name = name
         self.city = city
         self.state = state
         self.graduationYear = graduationYear
         self.GPA = GPA
+        self.subjects = subjects
     }
 }
 

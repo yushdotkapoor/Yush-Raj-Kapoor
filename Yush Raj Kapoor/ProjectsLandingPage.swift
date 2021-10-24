@@ -48,7 +48,7 @@ class ProjectsLandingPage: UIViewController {
             ct += 1
             let imgName = "\(iconName!)_screen_\(ct)"
             let uiimage = UIImage(named: imgName)
-            let width = UIScreen.main.bounds.width/2
+            let width = UIScreen.main.bounds.width/2.3
             let height = width * (uiimage?.size.height ?? 2) / (uiimage?.size.width ?? 1)
             
             let img = UIImageView(frame: CGRect(x: width * CGFloat(ct - 1), y: 0, width: width, height: height))

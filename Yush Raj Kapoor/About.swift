@@ -236,8 +236,8 @@ class About: UIViewController {
             } else if type == "mov" {
                 let u = createLocalUrl(for: "\(name)", ofType: "\(type)")
                 img = getThumbnailFrom(path: u!)
+                img = img?.drawPlayButton()
                 imageView.accessibilityLanguage = i
-                print("should have set")
             }
             let prevWidth = img?.size.width ?? 0
             let newWidth = width/CGFloat(media.count)
@@ -256,25 +256,14 @@ class About: UIViewController {
     }
     
     @objc private func didTapImageView(_ sender: UITapGestureRecognizer) {
-        print("has tapped")
         if let imgView = sender.view as? UIImageView {
             if let name = imgView.accessibilityLanguage {
                 let url = createLocalUrl(for: "\(name.split(separator: ".").first!)", ofType: "\(name.split(separator: ".").last!)") ?? URL(fileURLWithPath: "")
-                playVideo(path: url)
+                playVideo(path: url, sender: self)
             } else {
                 let vc = PhotoViewerViewController(with: imgView)
                 self.navigationController?.pushViewController(vc, animated: true)
             }
-        }
-    }
-    
-    func playVideo(path:URL) {
-        
-        let player = AVPlayer(url: path)
-        let playerController = AVPlayerViewController()
-        playerController.player = player
-        present(playerController, animated: true) {
-            player.play()
         }
     }
 }

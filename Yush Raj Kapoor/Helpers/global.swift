@@ -83,7 +83,6 @@ func createLocalUrl(for filename: String, ofType: String) -> URL? {
 
 //gets thumbnail from a video
 func getThumbnailFrom(path: URL) -> UIImage? {
-    
     do {
         let asset = AVURLAsset(url: path , options: nil)
         let length = Float(CMTimeGetSeconds(asset.duration))
@@ -98,7 +97,6 @@ func getThumbnailFrom(path: URL) -> UIImage? {
         print("*** Error generating thumbnail: \(error.localizedDescription)")
         return nil
     }
-    
 }
 
 //corrects spaces in URL path
@@ -106,4 +104,12 @@ func correctSpaces(str: String) -> String {
     return str.replacingOccurrences(of: " ", with: "_")
 }
 
-
+//plays a media file using a url
+func playVideo(path:URL, sender: UIViewController) {
+    let player = AVPlayer(url: path)
+    let playerController = AVPlayerViewController()
+    playerController.player = player
+    sender.present(playerController, animated: true) {
+        player.play()
+    }
+}

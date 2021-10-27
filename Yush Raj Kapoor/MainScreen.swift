@@ -99,8 +99,15 @@ class MainScreen:UIViewController {
     func displayButton() {
         let nextButton = UIButton(frame: CGRect(x: view.frame.width - 100, y: K.frame.origin.y+(K.transform.ty/2)-(K.frame.height/2), width: 100, height: 100))
         nextButton.setImage(UIImage(systemName: "arrow.right"), for: .normal)
+        
+        let introViewed = UserDefaults.standard.bool(forKey: "introViewed")
+        var segueIdentifier = "MainToIntro"
+        if introViewed {
+            segueIdentifier = "straightToTabBar"
+        }
+        
         nextButton.addAction(UIAction(handler: {[self] _ in
-            performSegue(withIdentifier: "MainToIntro", sender: self)
+            performSegue(withIdentifier: segueIdentifier, sender: self)
         }), for: .touchUpInside)
         
         

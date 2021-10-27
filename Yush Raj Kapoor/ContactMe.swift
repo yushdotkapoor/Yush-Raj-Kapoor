@@ -14,6 +14,7 @@ class ContactMe: UIViewController, MFMailComposeViewControllerDelegate {
     @IBOutlet weak var phoneImg: UIButton!
     @IBOutlet weak var emailImg: UIButton!
     @IBOutlet weak var gitImg: UIButton!
+    @IBOutlet weak var introductionPage: UIButton!
     
     let personalInfo = PersonalInfo()
     
@@ -31,6 +32,12 @@ class ContactMe: UIViewController, MFMailComposeViewControllerDelegate {
         gitImg.tintColor = .label
         emailImg.tintColor = .label
         phoneImg.tintColor = .label
+        
+        introductionPage.layer.cornerRadius = introductionPage.frame.height/2
+        introductionPage.backgroundColor = .label
+        introductionPage.title(for: .normal)
+        introductionPage.widthAnchor.constraint(equalToConstant: (introductionPage.titleLabel?.textWidth(withHeight: 17) ?? 0) + 20).isActive = true
+        
         
     }
     
@@ -53,6 +60,11 @@ class ContactMe: UIViewController, MFMailComposeViewControllerDelegate {
     @IBAction func githubTapped(_ sender: Any) {
         goToLink(ur: personalInfo.githubLink)
     }
+    
+    @IBAction func goToIntroPage(_ sender: Any) {
+        performSegue(withIdentifier: "backToIntro", sender: self)
+    }
+    
     
     
 }

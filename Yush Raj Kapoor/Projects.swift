@@ -23,6 +23,7 @@ class Projects: UIViewController, UITableViewDelegate, UITableViewDataSource {
         tableView.dataSource = self
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "buffer")
         tableView.layer.masksToBounds = false
+        
     }
     
     //Using multiple sections to make a spacing between the cells

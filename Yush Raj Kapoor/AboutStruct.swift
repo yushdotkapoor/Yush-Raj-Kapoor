@@ -12,13 +12,16 @@ struct hobby {
     var name:String
     var years:String
     var description:String
+    var media:[String]
     
     init(name:String,
          years:String,
-         description:String) {
+         description:String,
+         media:[String]=[]) {
         self.name = name
         self.years = years
         self.description = description
+        self.media = media
     }
 }
 
@@ -27,15 +30,18 @@ struct position {
     var startDate:String
     var endDate:String
     var jobs:[String]
+    var media:[String]
     
     init(name:String,
          startDate:String,
          endDate:String,
-         jobs:[String]) {
+         jobs:[String],
+         media:[String]=[]) {
         self.name = name
         self.startDate = startDate
         self.endDate = endDate
         self.jobs = jobs
+        self.media = media
     }
 }
 
@@ -57,18 +63,22 @@ struct school {
     var graduationYear:String
     var GPA:String
     var subjects:[String]
-
+    var media:[String]
+    
     init(name:String,
          city:String,
          state:String,
          graduationYear:String,
-         GPA:String, subjects:[String] = []) {
+         GPA:String,
+         subjects:[String] = [],
+         media:[String]=[]) {
         self.name = name
         self.city = city
         self.state = state
         self.graduationYear = graduationYear
         self.GPA = GPA
         self.subjects = subjects
+        self.media = media
     }
 }
 

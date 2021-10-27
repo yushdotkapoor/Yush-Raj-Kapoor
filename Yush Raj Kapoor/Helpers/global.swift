@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import AVKit
 
 //for haptic feedback
 func impact(style: UIImpactFeedbackGenerator.FeedbackStyle) {
@@ -28,8 +29,8 @@ func goToLink(ur:String) {
 func callPhoneNumber(number: String) {
     guard let url = URL(string: "telprompt://\(number)"),
           UIApplication.shared.canOpenURL(url) else {
-        return
-    }
+              return
+          }
     UIApplication.shared.open(url, options: [:], completionHandler: nil)
 }
 
@@ -63,6 +64,46 @@ func initLabel(textLbl:String="", size:CGFloat=17, color:UIColor=UIColor.label, 
 func initLabel(textLbls:[String], size:CGFloat=17, color:UIColor=UIColor.label, textAlignment:NSTextAlignment=NSTextAlignment.left) -> UILabel {
     let text = formatBullets(arr: textLbls)
     return initLabel(textLbl: text, size: size, color: color, textAlignment: textAlignment)
+}
+
+//creates a Local URL for a file
+func createLocalUrl(for filename: String, ofType: String) -> URL? {
+    let fileManager = FileManager.default
+    let cacheDirectory = fileManager.urls(for: .cachesDirectory, in: .userDomainMask)[0]
+    let url = cacheDirectory.appendingPathComponent("\(filename).\(ofType)")
+    
+    guard fileManager.fileExists(atPath: url.path) else {
+        guard let video = NSDataAsset(name: filename)  else { return nil }
+        fileManager.createFile(atPath: url.path, contents: video.data, attributes: nil)
+        return url
+    }
+    
+    return url
+}
+
+//gets thumbnail from a video
+func getThumbnailFrom(path: URL) -> UIImage? {
+    
+    do {
+        let asset = AVURLAsset(url: path , options: nil)
+        let length = Float(CMTimeGetSeconds(asset.duration))
+        let imgGenerator = AVAssetImageGenerator(asset: asset)
+        imgGenerator.appliesPreferredTrackTransform = true
+        let cgImage = try imgGenerator.copyCGImage(at: CMTimeMake(value: Int64(length)/2, timescale: 1), actualTime: nil)
+        let thumbnail = UIImage(cgImage: cgImage)
+        
+        return thumbnail
+        
+    } catch let error {
+        print("*** Error generating thumbnail: \(error.localizedDescription)")
+        return nil
+    }
+    
+}
+
+//corrects spaces in URL path
+func correctSpaces(str: String) -> String {
+    return str.replacingOccurrences(of: " ", with: "_")
 }
 
 

@@ -11,8 +11,19 @@ import UIKit
 extension UIStackView {
     func refactor(withWidth width:CGFloat, x:CGFloat=0, y:CGFloat=0) {
         var heights:[CGFloat] = []
-        arrangedSubviews.forEach( {subview in
-            if let sub = subview as? UILabel {
+        var horizontalHeights:[CGFloat] = []
+        arrangedSubviews.forEach( { subview in
+            if let sub = subview as? UIImageView {
+                let ht = sub.image?.size.height
+                subview.frame = CGRect(x: x, y: y, width: width, height: ht ?? 0)
+                if axis == .horizontal {
+                    horizontalHeights.append(ht ?? 0)
+                } else {
+                    
+                    heights.append(ht ?? 0)
+                }
+            }
+            else if let sub = subview as? UILabel {
                 let ht = sub.textHeight(withWidth: width)
                 subview.frame = CGRect(x: x, y: y, width: width, height: ht)
                 heights.append(ht)
@@ -20,6 +31,12 @@ extension UIStackView {
                 heights.append(subview.frame.height)
             }
         })
+        let maxHorizontalHeight = horizontalHeights.max()
+        if maxHorizontalHeight != nil && maxHorizontalHeight != 0 {
+            heights.append(maxHorizontalHeight!)
+        }
+        
+        
         frame = CGRect(x: x, y: y, width: width, height: (spacing * CGFloat(heights.count - 1)) + heights.sum())
     }
 }

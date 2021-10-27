@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import AVKit
 
 class About: UIViewController {
     let screenWidth = UIScreen.main.bounds.width
@@ -40,14 +41,14 @@ class About: UIViewController {
             sectionStack.addArrangedSubview(headerLbl)
             
             headerLbl.constrain(reference: sectionStack, leading: 20)
-        
+            
             var newView = UIStackView()
             
             if sectionHeader == sectionHeaders[0] {
                 let infoData = aboutData.getHobbies()
                 for i in infoData {
-                    newView = newHobbyStack(title: i.name, duration: i.years, description: i.description)
-
+                    newView = newHobbyStack(title: i.name, duration: i.years, description: i.description, media: i.media)
+                    
                     sectionStack.addArrangedSubview(newView)
                     newView.constrain(reference: sectionStack, leading: 20, trailing: 20)
                 }
@@ -55,7 +56,7 @@ class About: UIViewController {
                 let infoData = aboutData.getCommunity()
                 for i in infoData {
                     newView = newCommunityStack(title: i.organization, positions: i.positions)
-
+                    
                     sectionStack.addArrangedSubview(newView)
                     newView.constrain(reference: sectionStack, leading: 20, trailing: 20)
                 }
@@ -63,7 +64,7 @@ class About: UIViewController {
                 let infoData = aboutData.getSchool()
                 for i in infoData {
                     newView = newSchoolStack(school: i.name, gradYear: i.graduationYear, location: "\(i.city), \(i.state)", studyGPA: (i.GPA != "") ? "\(i.GPA) GPA":i.subjects.joined(separator: ", "))
-                  
+                    
                     sectionStack.addArrangedSubview(newView)
                     newView.constrain(reference: sectionStack, leading: 20, trailing: 20)
                 }
@@ -71,7 +72,7 @@ class About: UIViewController {
             
             let bottomBuffer = initLabel(textLbl: " ", size: (17.5-sectionSpacingConstant) * textFieldHeightConstant)
             sectionStack.addArrangedSubview(bottomBuffer)
-          
+            
             sectionStack.backgroundColor = .secondarySystemBackground
             sectionStack.layer.cornerRadius = 20
             sectionStack.layer.shadowColor = UIColor.secondaryLabel.cgColor
@@ -83,10 +84,38 @@ class About: UIViewController {
             sectionStack.refactor(withWidth: width)
         }
         masterStack.refactor(withWidth: width + 40, x:20, y:20)
-       
+        
         scrollView.addSubview(masterStack)
         masterStack.constrain(reference: scrollView, top: 20, bottom: 30, leading: 20, trailing: 20)
         
+    }
+    
+    func newHobbyStack(title:String, duration:String, description:String, media:[String]=[]) -> UIStackView {
+        let width = screenWidth - 80
+        
+        let titlLbl = initLabel(textLbl: title, size: 25, color: .secondaryLabel)
+        let durLbl = initLabel(textLbl: duration, size: 12, color: .secondaryLabel)
+        let titleStack = UIStackView()
+        titleStack.axis = .vertical
+        titleStack.addArrangedSubview(titlLbl)
+        titleStack.addArrangedSubview(durLbl)
+        titleStack.refactor(withWidth: width)
+        
+        let descLbl = initLabel(textLbl: description)
+        
+        let mediaStack = createImageStack(media: media)
+        
+        let VStack = UIStackView()
+        VStack.axis = .vertical
+        VStack.spacing = 8
+        VStack.addArrangedSubview(titleStack)
+        VStack.addArrangedSubview(descLbl)
+        if media != [] {
+            VStack.addArrangedSubview(mediaStack)
+        }
+        
+        VStack.refactor(withWidth: width)
+        return VStack
     }
     
     func newCommunityStack(title:String, positions:[position]) -> UIStackView {
@@ -106,7 +135,7 @@ class About: UIViewController {
         
         var newHeights:CGFloat = titlHeight
         for n in positions {
-            let newView = newPositionStack(position: n.name, duration: "\(n.startDate)-\(n.endDate)", description: formatBullets(arr: n.jobs))
+            let newView = newPositionStack(position: n.name, duration: "\(n.startDate)-\(n.endDate)", description: formatBullets(arr: n.jobs), media: n.media)
             VStack.addArrangedSubview(newView)
             newHeights += (newView.frame.height + VStackSpacing)
             totalViews?.append(newView)
@@ -116,7 +145,7 @@ class About: UIViewController {
         return VStack
     }
     
-    func newPositionStack(position:String, duration:String, description:String) -> UIStackView {
+    func newPositionStack(position:String, duration:String, description:String, media:[String]=[]) -> UIStackView {
         let width = screenWidth - 80
         
         let posLbl = initLabel(textLbl: position, size: 20)
@@ -130,43 +159,24 @@ class About: UIViewController {
         
         let descLbl = initLabel(textLbl: description)
         
+        let mediaStack = createImageStack(media: media)
+        
         
         let VStack = UIStackView()
         VStack.axis = .vertical
         VStack.spacing = 8
         VStack.addArrangedSubview(titleStack)
         VStack.addArrangedSubview(descLbl)
+        if media != [] {
+            VStack.addArrangedSubview(mediaStack)
+        }
         
         VStack.refactor(withWidth: width)
         
         return VStack
     }
     
-    func newHobbyStack(title:String, duration:String, description:String) -> UIStackView {
-        let width = screenWidth - 80
-        
-        let titlLbl = initLabel(textLbl: title, size: 25, color: .secondaryLabel)
-        let durLbl = initLabel(textLbl: duration, size: 12, color: .secondaryLabel)
-        let titleStack = UIStackView()
-        titleStack.axis = .vertical
-        titleStack.addArrangedSubview(titlLbl)
-        titleStack.addArrangedSubview(durLbl)
-        titleStack.refactor(withWidth: width)
-        
-        let descLbl = initLabel(textLbl: description)
-        
-        let VStack = UIStackView()
-        VStack.axis = .vertical
-        VStack.spacing = 8
-        VStack.addArrangedSubview(titleStack)
-        VStack.addArrangedSubview(descLbl)
-        
-        VStack.refactor(withWidth: width)
-        
-        return VStack
-    }
-    
-    func newSchoolStack(school:String, gradYear:String, location:String, studyGPA:String) -> UIStackView {
+    func newSchoolStack(school:String, gradYear:String, location:String, studyGPA:String, media:[String]=[]) -> UIStackView {
         let width = screenWidth - 80
         
         let schlLbl = initLabel(textLbl: school, color: .secondaryLabel)
@@ -186,14 +196,85 @@ class About: UIViewController {
         meatStack.addArrangedSubview(stdyLbl)
         meatStack.refactor(withWidth: width)
         
+        let mediaStack = createImageStack(media: media)
+        
         let VStack = UIStackView()
         VStack.axis = .vertical
         VStack.spacing = 8
         VStack.addArrangedSubview(titleStack)
         VStack.addArrangedSubview(meatStack)
+        if media != [] {
+            VStack.addArrangedSubview(mediaStack)
+        }
         
         VStack.refactor(withWidth: width)
         
         return VStack
+    }
+    
+    
+    func createImageStack(media:[String]) -> UIStackView {
+        let width = screenWidth - 80
+        
+        let mediaStack = UIStackView()
+        mediaStack.axis = .horizontal
+        mediaStack.spacing = 10
+        mediaStack.distribution = .fillEqually
+        
+        for i in media {
+            let splitted = i.split(separator: ".")
+            let name = splitted.first!
+            let type = splitted.last!
+            
+            let imageView = UIImageView()
+            imageView.isUserInteractionEnabled = true
+            imageView.contentMode = .scaleAspectFill
+            var img:UIImage?
+            if type == "JPG" {
+                img = UIImage(named: i)
+                imageView.accessibilityLanguage = nil
+            } else if type == "mov" {
+                let u = createLocalUrl(for: "\(name)", ofType: "\(type)")
+                img = getThumbnailFrom(path: u!)
+                imageView.accessibilityLanguage = i
+                print("should have set")
+            }
+            let prevWidth = img?.size.width ?? 0
+            let newWidth = width/CGFloat(media.count)
+            let newHeight = (img?.size.height ?? 0) * (newWidth / prevWidth)
+            imageView.image = img?.resize(targetSize: CGSize(width: width/CGFloat(media.count), height: newHeight))
+            imageView.layer.masksToBounds = true
+            imageView.layer.cornerRadius = 25
+            
+            mediaStack.addArrangedSubview(imageView)
+            let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(didTapImageView(_:)))
+            imageView.addGestureRecognizer(tapGestureRecognizer)
+        }
+        mediaStack.refactor(withWidth: width)
+        
+        return mediaStack
+    }
+    
+    @objc private func didTapImageView(_ sender: UITapGestureRecognizer) {
+        print("has tapped")
+        if let imgView = sender.view as? UIImageView {
+            if let name = imgView.accessibilityLanguage {
+                let url = createLocalUrl(for: "\(name.split(separator: ".").first!)", ofType: "\(name.split(separator: ".").last!)") ?? URL(fileURLWithPath: "")
+                playVideo(path: url)
+            } else {
+                let vc = PhotoViewerViewController(with: imgView)
+                self.navigationController?.pushViewController(vc, animated: true)
+            }
+        }
+    }
+    
+    func playVideo(path:URL) {
+        
+        let player = AVPlayer(url: path)
+        let playerController = AVPlayerViewController()
+        playerController.player = player
+        present(playerController, animated: true) {
+            player.play()
+        }
     }
 }

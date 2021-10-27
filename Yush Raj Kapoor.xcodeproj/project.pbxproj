@@ -26,6 +26,7 @@
 		9D91459D26F14AB900450F13 /* IntroPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D91459C26F14AB900450F13 /* IntroPageView.swift */; };
 		9D91459F26F154A400450F13 /* Hello.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D91459E26F154A400450F13 /* Hello.swift */; };
 		9D9145A126F1585200450F13 /* AboutMe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D9145A026F1585200450F13 /* AboutMe.swift */; };
+		9D91FB24272912C00076DB93 /* PhotoViewerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D91FB23272912C00076DB93 /* PhotoViewerViewController.swift */; };
 		9D9F36302706681A00F81EA9 /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D9F362F2706681A00F81EA9 /* UIViewControllerExtension.swift */; };
 		9D9F36322706683600F81EA9 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D9F36312706683600F81EA9 /* UIViewExtension.swift */; };
 		9D9F3634270693CB00F81EA9 /* PersonalInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D9F3633270693CB00F81EA9 /* PersonalInfo.swift */; };
@@ -62,6 +63,7 @@
 		9D91459C26F14AB900450F13 /* IntroPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroPageView.swift; sourceTree = "<group>"; };
 		9D91459E26F154A400450F13 /* Hello.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hello.swift; sourceTree = "<group>"; };
 		9D9145A026F1585200450F13 /* AboutMe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutMe.swift; sourceTree = "<group>"; };
+		9D91FB23272912C00076DB93 /* PhotoViewerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoViewerViewController.swift; sourceTree = "<group>"; };
 		9D9F362F2706681A00F81EA9 /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
 		9D9F36312706683600F81EA9 /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
 		9D9F3633270693CB00F81EA9 /* PersonalInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalInfo.swift; sourceTree = "<group>"; };
@@ -174,6 +176,7 @@
 				9D9F36312706683600F81EA9 /* UIViewExtension.swift */,
 				9DFA7A6D27252EF9004009EA /* UIStackViewExtension.swift */,
 				9DFA7A7127252F56004009EA /* ArrayExtension.swift */,
+				9D91FB23272912C00076DB93 /* PhotoViewerViewController.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -289,6 +292,7 @@
 				9DC9BCE827077A6200875B89 /* SkillsData.swift in Sources */,
 				9D6049BA270645DF00CC524E /* UIImageExtension.swift in Sources */,
 				9D9F3634270693CB00F81EA9 /* PersonalInfo.swift in Sources */,
+				9D91FB24272912C00076DB93 /* PhotoViewerViewController.swift in Sources */,
 				9D7C2A8A270430A100F9B81E /* NSMutableAttributedStringExtension.swift in Sources */,
 				9D36568426FFA1B900BC4E6F /* Projects.swift in Sources */,
 				9DB163FF26FD731D000F7E1C /* UILabelExtension.swift in Sources */,

@@ -7,6 +7,8 @@
 
 import UIKit
 
+var shouldPass = true
+
 class MainScreen:UIViewController {
     @IBOutlet weak var yrkStack: UIStackView!
     @IBOutlet weak var ush: UILabel!
@@ -101,10 +103,11 @@ class MainScreen:UIViewController {
         nextButton.setImage(UIImage(systemName: "arrow.right"), for: .normal)
         
         let introViewed = UserDefaults.standard.bool(forKey: "introViewed")
+        
         var segueIdentifier = "MainToIntro"
-        if introViewed {
-            segueIdentifier = "straightToTabBar"
-        }
+        segueIdentifier = introViewed ? "straightToTabBar":segueIdentifier
+        segueIdentifier = !shouldPass ? "toMain":segueIdentifier
+
         
         nextButton.addAction(UIAction(handler: {[self] _ in
             performSegue(withIdentifier: segueIdentifier, sender: self)

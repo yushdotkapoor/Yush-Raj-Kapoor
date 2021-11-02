@@ -27,18 +27,19 @@ class ContactMe: UIViewController, MFMailComposeViewControllerDelegate {
         if traitCollection.userInterfaceStyle == .light {
             tag = "Dark"
         }
-        
-        gitImg.setImage(UIImage(named: "GitHub-\(tag)")!, for: .normal)
+        gitImg.setBackgroundImage(UIImage(named: "GitHub-\(tag)")!, for: .normal)
         gitImg.tintColor = .label
         emailImg.tintColor = .label
         phoneImg.tintColor = .label
         
-        introductionPage.layer.cornerRadius = introductionPage.frame.height/2
-        introductionPage.backgroundColor = .label
-        introductionPage.title(for: .normal)
-        introductionPage.widthAnchor.constraint(equalToConstant: (introductionPage.titleLabel?.textWidth(withHeight: 17) ?? 0) + 20).isActive = true
-        
-        
+        setButton(button: introductionPage)
+    }
+    
+    func setButton(button:UIButton) {
+        button.layer.cornerRadius = button.frame.height/2
+        button.backgroundColor = .label
+        button.title(for: .normal)
+        button.widthAnchor.constraint(equalToConstant: (button.titleLabel?.textWidth(withHeight: 17) ?? 0) + 40).isActive = true
     }
     
     @IBAction func phoneTapped(_ sender: Any) {
@@ -64,7 +65,7 @@ class ContactMe: UIViewController, MFMailComposeViewControllerDelegate {
     @IBAction func goToIntroPage(_ sender: Any) {
         performSegue(withIdentifier: "backToIntro", sender: self)
     }
-    
+
     
     
 }

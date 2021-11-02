@@ -17,7 +17,7 @@ class Projects: UIViewController, UITableViewDelegate, UITableViewDataSource {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        data = ProjectsData().getProjects()
+        data = ProjectsData.shared.projects
         
         tableView.delegate = self
         tableView.dataSource = self
@@ -80,4 +80,6 @@ class Projects: UIViewController, UITableViewDelegate, UITableViewDataSource {
         vc.title = indexedCell?.name
         navigationController?.pushViewController(vc, animated: true)
         }
+    
+   
 }

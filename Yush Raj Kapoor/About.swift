@@ -25,7 +25,6 @@ class About: UIViewController {
         let width = screenWidth - 80
         
         let sectionHeaders = ["Hobbies", "Community", "School"]
-        let aboutData = AboutData()
         
         for sectionHeader in sectionHeaders {
             
@@ -45,7 +44,7 @@ class About: UIViewController {
             var newView = UIStackView()
             
             if sectionHeader == sectionHeaders[0] {
-                let infoData = aboutData.getHobbies()
+                let infoData = AboutData.shared.hobbies
                 for i in infoData {
                     newView = newHobbyStack(title: i.name, duration: i.years, description: i.description, media: i.media)
                     
@@ -53,7 +52,7 @@ class About: UIViewController {
                     newView.constrain(reference: sectionStack, leading: 20, trailing: 20)
                 }
             } else if sectionHeader == sectionHeaders[1] {
-                let infoData = aboutData.getCommunity()
+                let infoData = AboutData.shared.communities
                 for i in infoData {
                     newView = newCommunityStack(title: i.organization, positions: i.positions)
                     
@@ -61,7 +60,7 @@ class About: UIViewController {
                     newView.constrain(reference: sectionStack, leading: 20, trailing: 20)
                 }
             } else if sectionHeader == sectionHeaders[2] {
-                let infoData = aboutData.getSchool()
+                let infoData = AboutData.shared.schools
                 for i in infoData {
                     newView = newSchoolStack(school: i.name, gradYear: i.graduationYear, location: "\(i.city), \(i.state)", studyGPA: (i.GPA != "") ? "\(i.GPA) GPA":i.subjects.joined(separator: ", "))
                     
@@ -220,8 +219,10 @@ class About: UIViewController {
         mediaStack.axis = .horizontal
         mediaStack.spacing = 10
         mediaStack.distribution = .fillEqually
-        
         for i in media {
+            if i == "" {
+                break
+            }
             let splitted = i.split(separator: ".")
             let name = splitted.first!
             let type = splitted.last!
@@ -266,4 +267,6 @@ class About: UIViewController {
             }
         }
     }
+    
+
 }

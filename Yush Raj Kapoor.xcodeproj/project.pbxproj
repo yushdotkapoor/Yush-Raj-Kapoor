@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -14,6 +14,9 @@
 		9D36568F26FFAA6900BC4E6F /* ProjectsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D36568E26FFAA6900BC4E6F /* ProjectsData.swift */; };
 		9D36569126FFAB2500BC4E6F /* ProjectsStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D36569026FFAB2500BC4E6F /* ProjectsStruct.swift */; };
 		9D6049BA270645DF00CC524E /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D6049B9270645DF00CC524E /* UIImageExtension.swift */; };
+		9D7BBEFB272B241E005DF690 /* ColorPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7BBEFA272B241E005DF690 /* ColorPicker.swift */; };
+		9D7BBEFD272B2645005DF690 /* CALayerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7BBEFC272B2645005DF690 /* CALayerExtension.swift */; };
+		9D7BBEFF272B2B27005DF690 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7BBEFE272B2B27005DF690 /* UIColorExtension.swift */; };
 		9D7C2A8627040FCF00F9B81E /* ProjectsLandingPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7C2A8527040FCF00F9B81E /* ProjectsLandingPage.swift */; };
 		9D7C2A8A270430A100F9B81E /* NSMutableAttributedStringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7C2A89270430A100F9B81E /* NSMutableAttributedStringExtension.swift */; };
 		9D91458326F0F02F00450F13 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D91458226F0F02F00450F13 /* AppDelegate.swift */; };
@@ -27,6 +30,10 @@
 		9D91459F26F154A400450F13 /* Hello.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D91459E26F154A400450F13 /* Hello.swift */; };
 		9D9145A126F1585200450F13 /* AboutMe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D9145A026F1585200450F13 /* AboutMe.swift */; };
 		9D91FB24272912C00076DB93 /* PhotoViewerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D91FB23272912C00076DB93 /* PhotoViewerViewController.swift */; };
+		9D9E9509272CA2FA000DB25E /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 9D9E9508272CA2FA000DB25E /* FirebaseAuth */; };
+		9D9E950B272CA2FA000DB25E /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 9D9E950A272CA2FA000DB25E /* FirebaseDatabase */; };
+		9D9E950D272CA2FA000DB25E /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 9D9E950C272CA2FA000DB25E /* FirebaseStorage */; };
+		9D9E950F272CA4EC000DB25E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9D9E950E272CA4EC000DB25E /* GoogleService-Info.plist */; };
 		9D9F36302706681A00F81EA9 /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D9F362F2706681A00F81EA9 /* UIViewControllerExtension.swift */; };
 		9D9F36322706683600F81EA9 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D9F36312706683600F81EA9 /* UIViewExtension.swift */; };
 		9D9F3634270693CB00F81EA9 /* PersonalInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D9F3633270693CB00F81EA9 /* PersonalInfo.swift */; };
@@ -37,6 +44,7 @@
 		9DC9BCEE2708022F00875B89 /* AboutStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC9BCEC2708022F00875B89 /* AboutStruct.swift */; };
 		9DC9BCEF2708022F00875B89 /* About.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC9BCED2708022F00875B89 /* About.swift */; };
 		9DC9BCF127095BF100875B89 /* AboutData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC9BCF027095BF100875B89 /* AboutData.swift */; };
+		9DCAE70C272B167A00B377C0 /* MorseCodeFlasher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DCAE70B272B167A00B377C0 /* MorseCodeFlasher.swift */; };
 		9DFA7A6E27252EF9004009EA /* UIStackViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DFA7A6D27252EF9004009EA /* UIStackViewExtension.swift */; };
 		9DFA7A7227252F56004009EA /* ArrayExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DFA7A7127252F56004009EA /* ArrayExtension.swift */; };
 /* End PBXBuildFile section */
@@ -49,6 +57,9 @@
 		9D36568E26FFAA6900BC4E6F /* ProjectsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectsData.swift; sourceTree = "<group>"; };
 		9D36569026FFAB2500BC4E6F /* ProjectsStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectsStruct.swift; sourceTree = "<group>"; };
 		9D6049B9270645DF00CC524E /* UIImageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageExtension.swift; sourceTree = "<group>"; };
+		9D7BBEFA272B241E005DF690 /* ColorPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPicker.swift; sourceTree = "<group>"; };
+		9D7BBEFC272B2645005DF690 /* CALayerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CALayerExtension.swift; sourceTree = "<group>"; };
+		9D7BBEFE272B2B27005DF690 /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		9D7C2A8527040FCF00F9B81E /* ProjectsLandingPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectsLandingPage.swift; sourceTree = "<group>"; };
 		9D7C2A89270430A100F9B81E /* NSMutableAttributedStringExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSMutableAttributedStringExtension.swift; sourceTree = "<group>"; };
 		9D91457F26F0F02F00450F13 /* Yush Raj Kapoor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Yush Raj Kapoor.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -64,6 +75,7 @@
 		9D91459E26F154A400450F13 /* Hello.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hello.swift; sourceTree = "<group>"; };
 		9D9145A026F1585200450F13 /* AboutMe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutMe.swift; sourceTree = "<group>"; };
 		9D91FB23272912C00076DB93 /* PhotoViewerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoViewerViewController.swift; sourceTree = "<group>"; };
+		9D9E950E272CA4EC000DB25E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		9D9F362F2706681A00F81EA9 /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
 		9D9F36312706683600F81EA9 /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
 		9D9F3633270693CB00F81EA9 /* PersonalInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalInfo.swift; sourceTree = "<group>"; };
@@ -74,6 +86,7 @@
 		9DC9BCEC2708022F00875B89 /* AboutStruct.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutStruct.swift; sourceTree = "<group>"; };
 		9DC9BCED2708022F00875B89 /* About.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = About.swift; sourceTree = "<group>"; };
 		9DC9BCF027095BF100875B89 /* AboutData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutData.swift; sourceTree = "<group>"; };
+		9DCAE70B272B167A00B377C0 /* MorseCodeFlasher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MorseCodeFlasher.swift; sourceTree = "<group>"; };
 		9DFA7A6D27252EF9004009EA /* UIStackViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIStackViewExtension.swift; sourceTree = "<group>"; };
 		9DFA7A7127252F56004009EA /* ArrayExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -83,6 +96,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9D9E950B272CA2FA000DB25E /* FirebaseDatabase in Frameworks */,
+				9D9E9509272CA2FA000DB25E /* FirebaseAuth in Frameworks */,
+				9D9E950D272CA2FA000DB25E /* FirebaseStorage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -155,10 +171,13 @@
 				9D91458826F0F02F00450F13 /* Main.storyboard */,
 				9D91458B26F0F03200450F13 /* Assets.xcassets */,
 				9D91459826F0F5BC00450F13 /* MainScreen.swift */,
+				9DCAE70B272B167A00B377C0 /* MorseCodeFlasher.swift */,
+				9D7BBEFA272B241E005DF690 /* ColorPicker.swift */,
 				9D36567E26FFA16600BC4E6F /* PageViewController */,
 				9D36568226FFA19000BC4E6F /* TabBarController */,
 				9DB163FD26FD7307000F7E1C /* Helpers */,
 				9D91458D26F0F03200450F13 /* LaunchScreen.storyboard */,
+				9D9E950E272CA4EC000DB25E /* GoogleService-Info.plist */,
 				9D91459026F0F03200450F13 /* Info.plist */,
 			);
 			path = "Yush Raj Kapoor";
@@ -177,6 +196,8 @@
 				9DFA7A6D27252EF9004009EA /* UIStackViewExtension.swift */,
 				9DFA7A7127252F56004009EA /* ArrayExtension.swift */,
 				9D91FB23272912C00076DB93 /* PhotoViewerViewController.swift */,
+				9D7BBEFC272B2645005DF690 /* CALayerExtension.swift */,
+				9D7BBEFE272B2B27005DF690 /* UIColorExtension.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -217,6 +238,11 @@
 			dependencies = (
 			);
 			name = "Yush Raj Kapoor";
+			packageProductDependencies = (
+				9D9E9508272CA2FA000DB25E /* FirebaseAuth */,
+				9D9E950A272CA2FA000DB25E /* FirebaseDatabase */,
+				9D9E950C272CA2FA000DB25E /* FirebaseStorage */,
+			);
 			productName = "Yush Raj Kapoor";
 			productReference = 9D91457F26F0F02F00450F13 /* Yush Raj Kapoor.app */;
 			productType = "com.apple.product-type.application";
@@ -244,6 +270,9 @@
 				Base,
 			);
 			mainGroup = 9D91457626F0F02F00450F13;
+			packageReferences = (
+				9D9E9507272CA2FA000DB25E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = 9D91458026F0F02F00450F13 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -259,6 +288,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9D91458F26F0F03200450F13 /* LaunchScreen.storyboard in Resources */,
+				9D9E950F272CA4EC000DB25E /* GoogleService-Info.plist in Resources */,
 				9D91458C26F0F03200450F13 /* Assets.xcassets in Resources */,
 				9D91458A26F0F02F00450F13 /* Main.storyboard in Resources */,
 			);
@@ -279,11 +309,15 @@
 				9DB1640126FD7332000F7E1C /* StringExtension.swift in Sources */,
 				9D91459D26F14AB900450F13 /* IntroPageView.swift in Sources */,
 				9DFA7A6E27252EF9004009EA /* UIStackViewExtension.swift in Sources */,
+				9D7BBEFF272B2B27005DF690 /* UIColorExtension.swift in Sources */,
 				9D91459F26F154A400450F13 /* Hello.swift in Sources */,
 				9D9145A126F1585200450F13 /* AboutMe.swift in Sources */,
 				9DC9BCEE2708022F00875B89 /* AboutStruct.swift in Sources */,
+				9D7BBEFB272B241E005DF690 /* ColorPicker.swift in Sources */,
+				9DCAE70C272B167A00B377C0 /* MorseCodeFlasher.swift in Sources */,
 				9DFA7A7227252F56004009EA /* ArrayExtension.swift in Sources */,
 				9D91458526F0F02F00450F13 /* SceneDelegate.swift in Sources */,
+				9D7BBEFD272B2645005DF690 /* CALayerExtension.swift in Sources */,
 				9D36568626FFA1D300BC4E6F /* Skills.swift in Sources */,
 				9D36568D26FFA76700BC4E6F /* ProjectsTableViewCell.swift in Sources */,
 				9D7C2A8627040FCF00F9B81E /* ProjectsLandingPage.swift in Sources */,
@@ -447,12 +481,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = 68L233566P;
 				INFOPLIST_FILE = "Yush Raj Kapoor/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.1.2;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.YushRajKapoor.Yush-Raj-Kapoor";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -466,12 +502,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = 68L233566P;
 				INFOPLIST_FILE = "Yush Raj Kapoor/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.1.2;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.YushRajKapoor.Yush-Raj-Kapoor";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -501,6 +539,35 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		9D9E9507272CA2FA000DB25E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 8.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		9D9E9508272CA2FA000DB25E /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9D9E9507272CA2FA000DB25E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		9D9E950A272CA2FA000DB25E /* FirebaseDatabase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9D9E9507272CA2FA000DB25E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseDatabase;
+		};
+		9D9E950C272CA2FA000DB25E /* FirebaseStorage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9D9E9507272CA2FA000DB25E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseStorage;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 9D91457726F0F02F00450F13 /* Project object */;
 }

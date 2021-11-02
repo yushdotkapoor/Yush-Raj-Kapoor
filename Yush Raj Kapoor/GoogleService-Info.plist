@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>56388509606-hi1602eje9bbg6p3vn996njmgggtunf5.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.56388509606-hi1602eje9bbg6p3vn996njmgggtunf5</string>
+	<key>API_KEY</key>
+	<string>AIzaSyBm6mwpNC94eL1NyxfWmFYT78404AVfvbQ</string>
+	<key>GCM_SENDER_ID</key>
+	<string>56388509606</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.YushRajKapoor.Yush-Raj-Kapoor</string>
+	<key>PROJECT_ID</key>
+	<string>yush-raj-kapo</string>
+	<key>STORAGE_BUCKET</key>
+	<string>yush-raj-kapo.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:56388509606:ios:9b3cf7e3aa79915626b967</string>
+	<key>DATABASE_URL</key>
+	<string>https://yush-raj-kapo-default-rtdb.firebaseio.com</string>
+</dict>
+</plist>

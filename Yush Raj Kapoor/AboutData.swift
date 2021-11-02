@@ -10,6 +10,12 @@ import UIKit
 
 class AboutData {
     
+    static let shared = AboutData()
+    
+    var schools:[school] = []
+    var hobbies:[hobby] = []
+    var communities:[community] = []
+    
     var pondo = school(name: "Ponderosa High School", city: "Shingle Springs", state: "CA", graduationYear: "2020", GPA: "4.3")
     var jhu = school(name: "Johns Hopkins University", city: "Baltimore", state: "MD", graduationYear: "2024", GPA: "", subjects: ["Neuroscience", "Computer Science"])
     
@@ -24,16 +30,10 @@ class AboutData {
     var chocolate = hobby(name: "Chocolate", years: "Forever", description: "Chocolate is like the world saying, \"Everything is going to be alright.\" My favorite chocolate has to be Harry&David Dark Chocolate Truffles; they are the definition of melt in your mouth. I do not, however, like chocolate with nuts (with the exception of hazelnut). One day, I hope to make my own homemade chocolate.")
     
     
-    func getSchool() -> [school] {
-        return [pondo, jhu]
-    }
-    
-    func getCommunity() -> [community] {
-        return [mBand, keyClub, marshall]
-    }
-    
-    func getHobbies() -> [hobby] {
-        return [biking, chocolate, music]
+    init() {
+        schools = [pondo, jhu]
+        hobbies = [biking, chocolate, music]
+        communities = [mBand, keyClub, marshall]
     }
     
     func getPositions(comm: [community]) -> [[position]] {

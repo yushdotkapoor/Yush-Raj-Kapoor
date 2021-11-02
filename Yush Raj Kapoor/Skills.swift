@@ -12,7 +12,7 @@ class Skills: UIViewController {
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var stackView: UIStackView!
     
-    var skills = SkillsData().getSkills()
+    var skills = SkillsData.shared.skills
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -58,5 +58,7 @@ class Skills: UIViewController {
     func addSpacer() {
         stackView.addArrangedSubview(UIView(frame: CGRect(x: 0, y: 0, width: CGFloat(), height: 10)))
     }
+    
+    
     
 }

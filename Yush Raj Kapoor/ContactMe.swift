@@ -15,6 +15,7 @@ class ContactMe: UIViewController, MFMailComposeViewControllerDelegate {
     @IBOutlet weak var emailImg: UIButton!
     @IBOutlet weak var gitImg: UIButton!
     @IBOutlet weak var introductionPage: UIButton!
+    @IBOutlet weak var modules: UIButton!
     
     let personalInfo = PersonalInfo()
     
@@ -33,6 +34,7 @@ class ContactMe: UIViewController, MFMailComposeViewControllerDelegate {
         phoneImg.tintColor = .label
         
         setButton(button: introductionPage)
+        setButton(button: modules)
     }
     
     func setButton(button:UIButton) {
@@ -66,6 +68,11 @@ class ContactMe: UIViewController, MFMailComposeViewControllerDelegate {
         performSegue(withIdentifier: "backToIntro", sender: self)
     }
 
+    @IBAction func goToModules(_ sender: Any) {
+        let vc = UIStoryboard(name:"Main", bundle:nil).instantiateViewController(identifier: "ModulesLandingPage") as! ModulesLandingPage
+        vc.title = "iOS Modules"
+        navigationController?.pushViewController(vc, animated: true)
+    }
     
     
 }

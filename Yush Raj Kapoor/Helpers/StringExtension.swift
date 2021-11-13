@@ -145,6 +145,29 @@ extension String {
         }
         return morse
     }
+    
+    func isClassProjects() -> Bool {
+        let projectData = ProjectsData.shared.projects
+        for i in projectData {
+            let n = i.name
+            if contains(n) {
+                return true
+            }
+        }
+        return false
+    }
+    
+    func isClassModules() -> Bool {
+        let skillData = SkillsData.shared.skills
+        for i in skillData {
+            let n = i.name
+            if contains(n) {
+                return true
+            }
+        }
+        return false
+    }
+    
 }
 
 extension NSAttributedString {

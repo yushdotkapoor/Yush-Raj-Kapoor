@@ -27,6 +27,7 @@ class ColorPicker:UIViewController, AVCaptureVideoDataOutputSampleBufferDelegate
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        title = "Camera Color Picker"
     }
     
     func setupUI() {
@@ -126,6 +127,7 @@ class ColorPicker:UIViewController, AVCaptureVideoDataOutputSampleBufferDelegate
             let rgbString = "(r: \(red), g: \(green), b: \(blue))"
             let hexString = "\(color?.toHexString() ?? "")"
             self.label.text = "\(rgbString)\n\n\(hexString)"
+            
         }
     }
     

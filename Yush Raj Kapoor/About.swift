@@ -14,6 +14,9 @@ class About: UIViewController {
     
     let textFieldHeightConstant = 0.8379705401
     
+   
+    var masterLabels:[UILabel] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         scrollView.layer.masksToBounds = false
@@ -30,8 +33,8 @@ class About: UIViewController {
             
             let sectionSpacingConstant:CGFloat = 16
             
-            let topBuffer = initLabel(textLbl: " ", size: (17.5-sectionSpacingConstant) * textFieldHeightConstant)
-            let headerLbl = initLabel(textLbl: sectionHeader, size: 30)
+            let topBuffer = UILabel().initLabel(textLbl: " ", size: (17.5-sectionSpacingConstant) * textFieldHeightConstant)
+            let headerLbl = UILabel().initLabel(textLbl: sectionHeader, size: 30)
             
             let sectionStack = UIStackView()
             sectionStack.spacing = sectionSpacingConstant
@@ -69,7 +72,7 @@ class About: UIViewController {
                 }
             }
             
-            let bottomBuffer = initLabel(textLbl: " ", size: (17.5-sectionSpacingConstant) * textFieldHeightConstant)
+            let bottomBuffer = UILabel().initLabel(textLbl: " ", size: (17.5-sectionSpacingConstant) * textFieldHeightConstant)
             sectionStack.addArrangedSubview(bottomBuffer)
             
             sectionStack.backgroundColor = .secondarySystemBackground
@@ -87,20 +90,44 @@ class About: UIViewController {
         scrollView.addSubview(masterStack)
         masterStack.constrain(reference: scrollView, top: 20, bottom: 30, leading: 20, trailing: 20)
         
+        
+        masterLabels = masterStack.labelSniffer()
+        for i in masterLabels {
+            i.addAttribution()
+            if i.containKeyWords() != "" {
+                i.addGestureRecognizer(UITapGestureRecognizer(target:self, action: #selector(tapLabel(gesture:))))
+            }
+        }
+        
+    }
+    
+    @objc func tapLabel(gesture: UIGestureRecognizer) {
+        for i in masterLabels {
+            guard let lblText = i.text else {
+                continue
+            }
+            let containsString = i.containKeyWords()
+            if containsString != "" {
+                let textRange = (lblText as NSString).range(of: containsString)
+                if gesture.didTapAttributedTextInLabel(label: i, inRange: textRange) {
+                    presentBasedOnText(text: containsString)
+                }
+            }
+        }
     }
     
     func newHobbyStack(title:String, duration:String, description:String, media:[String]=[]) -> UIStackView {
         let width = screenWidth - 80
         
-        let titlLbl = initLabel(textLbl: title, size: 25, color: .secondaryLabel)
-        let durLbl = initLabel(textLbl: duration, size: 12, color: .secondaryLabel)
+        let titlLbl = UILabel().initLabel(textLbl: title, size: 25, color: .secondaryLabel)
+        let durLbl = UILabel().initLabel(textLbl: duration, size: 12, color: .secondaryLabel)
         let titleStack = UIStackView()
         titleStack.axis = .vertical
         titleStack.addArrangedSubview(titlLbl)
         titleStack.addArrangedSubview(durLbl)
         titleStack.refactor(withWidth: width)
         
-        let descLbl = initLabel(textLbl: description)
+        let descLbl = UILabel().initLabel(textLbl: description)
         
         let mediaStack = createImageStack(media: media)
         
@@ -120,7 +147,7 @@ class About: UIViewController {
     func newCommunityStack(title:String, positions:[position]) -> UIStackView {
         let VStackSpacing:CGFloat = 10
         
-        let titlLbl = initLabel(textLbl: title, size: 25, color: .secondaryLabel)
+        let titlLbl = UILabel().initLabel(textLbl: title, size: 25, color: .secondaryLabel)
         
         let width = screenWidth - 80
         
@@ -147,8 +174,8 @@ class About: UIViewController {
     func newPositionStack(position:String, duration:String, description:String, media:[String]=[]) -> UIStackView {
         let width = screenWidth - 80
         
-        let posLbl = initLabel(textLbl: position, size: 20)
-        let durLbl = initLabel(textLbl: duration, size: 12, color: .secondaryLabel)
+        let posLbl = UILabel().initLabel(textLbl: position, size: 20)
+        let durLbl = UILabel().initLabel(textLbl: duration, size: 12, color: .secondaryLabel)
         let titleStack = UIStackView()
         titleStack.axis = .vertical
         titleStack.addArrangedSubview(posLbl)
@@ -156,10 +183,10 @@ class About: UIViewController {
         
         titleStack.refactor(withWidth: width)
         
-        let descLbl = initLabel(textLbl: description)
+        let descLbl = UILabel().initLabel(textLbl: description)
+        
         
         let mediaStack = createImageStack(media: media)
-        
         
         let VStack = UIStackView()
         VStack.axis = .vertical
@@ -175,19 +202,20 @@ class About: UIViewController {
         return VStack
     }
     
+    
     func newSchoolStack(school:String, gradYear:String, location:String, studyGPA:String, media:[String]=[]) -> UIStackView {
         let width = screenWidth - 80
         
-        let schlLbl = initLabel(textLbl: school, color: .secondaryLabel)
-        let gradLbl = initLabel(textLbl: gradYear, size: 12, color: .secondaryLabel)
+        let schlLbl = UILabel().initLabel(textLbl: school, color: .secondaryLabel)
+        let gradLbl = UILabel().initLabel(textLbl: gradYear, size: 12, color: .secondaryLabel)
         let titleStack = UIStackView()
         titleStack.axis = .vertical
         titleStack.addArrangedSubview(schlLbl)
         titleStack.addArrangedSubview(gradLbl)
         titleStack.refactor(withWidth: width)
         
-        let locLbl = initLabel(textLbl: location)
-        let stdyLbl = initLabel(textLbl: studyGPA)
+        let locLbl = UILabel().initLabel(textLbl: location)
+        let stdyLbl = UILabel().initLabel(textLbl: studyGPA)
         let meatStack = UIStackView()
         meatStack.axis = .vertical
         meatStack.spacing = 5
@@ -268,5 +296,5 @@ class About: UIViewController {
         }
     }
     
-
+    
 }

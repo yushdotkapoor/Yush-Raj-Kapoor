@@ -49,22 +49,6 @@ func formatBullets(arr:[String]) -> String {
     return str
 }
 
-//initializes label with many properties to save space
-func initLabel(textLbl:String="", size:CGFloat=17, color:UIColor=UIColor.label, textAlignment:NSTextAlignment=NSTextAlignment.left) -> UILabel {
-    let label = UILabel()
-    label.numberOfLines = 0
-    label.textAlignment = textAlignment
-    label.font = label.font.withSize(size)
-    label.textColor = color
-    label.text = textLbl
-    return label
-}
-
-//initializes label with an array to form bullet point style text
-func initLabel(textLbls:[String], size:CGFloat=17, color:UIColor=UIColor.label, textAlignment:NSTextAlignment=NSTextAlignment.left) -> UILabel {
-    let text = formatBullets(arr: textLbls)
-    return initLabel(textLbl: text, size: size, color: color, textAlignment: textAlignment)
-}
 
 //creates a Local URL for a file
 func createLocalUrl(for filename: String, ofType: String) -> URL? {

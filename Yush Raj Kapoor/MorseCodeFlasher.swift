@@ -42,7 +42,7 @@ class MorseCodeFlasher: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        title = "Morse Code Flasher"
         targetText.backgroundColor = .secondarySystemBackground
         targetText.layer.masksToBounds = true
         targetText.layer.cornerRadius = 10
@@ -211,6 +211,11 @@ class MorseCodeFlasher: UIViewController {
     }
     
     
+    func setMorseText() {
+        morseString = targetText.text ?? ""
+        convertedText.text = morseString.stringToMorse()
+    }
+    
     func manualStop() {
         timer?.invalidate()
         chap6Timer = false
@@ -234,18 +239,12 @@ class MorseCodeFlasher: UIViewController {
         self.setupMorseFlashesSequence()
     }
     
-    func setMorseText() {
-        morseString = targetText.text ?? ""
-        convertedText.text = morseString.stringToMorse()
-    }
-    
     @IBAction func stop(_ sender: Any) {
         manualStop()
     }
     
     @IBAction func vibrateSwitchActive(_ sender: Any) {
         vibrateOn = vibrateSwitch.isOn
-        
     }
     
     @IBAction func flashSwitchActive(_ sender: Any) {

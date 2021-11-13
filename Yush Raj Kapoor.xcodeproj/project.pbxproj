@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9D357EDF273F5CF6002F4C91 /* UITapGestureRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D357EDE273F5CF6002F4C91 /* UITapGestureRecognizer.swift */; };
+		9D357EE1273F7654002F4C91 /* UIApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D357EE0273F7654002F4C91 /* UIApplication.swift */; };
 		9D36568426FFA1B900BC4E6F /* Projects.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D36568326FFA1B900BC4E6F /* Projects.swift */; };
 		9D36568626FFA1D300BC4E6F /* Skills.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D36568526FFA1D300BC4E6F /* Skills.swift */; };
 		9D36568A26FFA1EB00BC4E6F /* ContactMe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D36568926FFA1EB00BC4E6F /* ContactMe.swift */; };
@@ -19,6 +21,7 @@
 		9D7BBEFF272B2B27005DF690 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7BBEFE272B2B27005DF690 /* UIColorExtension.swift */; };
 		9D7C2A8627040FCF00F9B81E /* ProjectsLandingPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7C2A8527040FCF00F9B81E /* ProjectsLandingPage.swift */; };
 		9D7C2A8A270430A100F9B81E /* NSMutableAttributedStringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7C2A89270430A100F9B81E /* NSMutableAttributedStringExtension.swift */; };
+		9D854D8A273F7D27001F5C9D /* ModulesLandingPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D854D89273F7D27001F5C9D /* ModulesLandingPage.swift */; };
 		9D91458326F0F02F00450F13 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D91458226F0F02F00450F13 /* AppDelegate.swift */; };
 		9D91458526F0F02F00450F13 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D91458426F0F02F00450F13 /* SceneDelegate.swift */; };
 		9D91458A26F0F02F00450F13 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D91458826F0F02F00450F13 /* Main.storyboard */; };
@@ -50,6 +53,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9D357EDE273F5CF6002F4C91 /* UITapGestureRecognizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITapGestureRecognizer.swift; sourceTree = "<group>"; };
+		9D357EE0273F7654002F4C91 /* UIApplication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIApplication.swift; sourceTree = "<group>"; };
 		9D36568326FFA1B900BC4E6F /* Projects.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Projects.swift; sourceTree = "<group>"; };
 		9D36568526FFA1D300BC4E6F /* Skills.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Skills.swift; sourceTree = "<group>"; };
 		9D36568926FFA1EB00BC4E6F /* ContactMe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactMe.swift; sourceTree = "<group>"; };
@@ -62,6 +67,7 @@
 		9D7BBEFE272B2B27005DF690 /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		9D7C2A8527040FCF00F9B81E /* ProjectsLandingPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectsLandingPage.swift; sourceTree = "<group>"; };
 		9D7C2A89270430A100F9B81E /* NSMutableAttributedStringExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSMutableAttributedStringExtension.swift; sourceTree = "<group>"; };
+		9D854D89273F7D27001F5C9D /* ModulesLandingPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModulesLandingPage.swift; sourceTree = "<group>"; };
 		9D91457F26F0F02F00450F13 /* Yush Raj Kapoor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Yush Raj Kapoor.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D91458226F0F02F00450F13 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9D91458426F0F02F00450F13 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -147,6 +153,16 @@
 			name = ContactMe;
 			sourceTree = "<group>";
 		};
+		9D854D88273F7D14001F5C9D /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				9D854D89273F7D27001F5C9D /* ModulesLandingPage.swift */,
+				9DCAE70B272B167A00B377C0 /* MorseCodeFlasher.swift */,
+				9D7BBEFA272B241E005DF690 /* ColorPicker.swift */,
+			);
+			name = Modules;
+			sourceTree = "<group>";
+		};
 		9D91457626F0F02F00450F13 = {
 			isa = PBXGroup;
 			children = (
@@ -171,8 +187,7 @@
 				9D91458826F0F02F00450F13 /* Main.storyboard */,
 				9D91458B26F0F03200450F13 /* Assets.xcassets */,
 				9D91459826F0F5BC00450F13 /* MainScreen.swift */,
-				9DCAE70B272B167A00B377C0 /* MorseCodeFlasher.swift */,
-				9D7BBEFA272B241E005DF690 /* ColorPicker.swift */,
+				9D854D88273F7D14001F5C9D /* Modules */,
 				9D36567E26FFA16600BC4E6F /* PageViewController */,
 				9D36568226FFA19000BC4E6F /* TabBarController */,
 				9DB163FD26FD7307000F7E1C /* Helpers */,
@@ -198,6 +213,8 @@
 				9D91FB23272912C00076DB93 /* PhotoViewerViewController.swift */,
 				9D7BBEFC272B2645005DF690 /* CALayerExtension.swift */,
 				9D7BBEFE272B2B27005DF690 /* UIColorExtension.swift */,
+				9D357EDE273F5CF6002F4C91 /* UITapGestureRecognizer.swift */,
+				9D357EE0273F7654002F4C91 /* UIApplication.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -306,13 +323,16 @@
 				9D36568F26FFAA6900BC4E6F /* ProjectsData.swift in Sources */,
 				9DC9BCE62707783C00875B89 /* SkillsStruct.swift in Sources */,
 				9D91459926F0F5BC00450F13 /* MainScreen.swift in Sources */,
+				9D357EDF273F5CF6002F4C91 /* UITapGestureRecognizer.swift in Sources */,
 				9DB1640126FD7332000F7E1C /* StringExtension.swift in Sources */,
 				9D91459D26F14AB900450F13 /* IntroPageView.swift in Sources */,
+				9D357EE1273F7654002F4C91 /* UIApplication.swift in Sources */,
 				9DFA7A6E27252EF9004009EA /* UIStackViewExtension.swift in Sources */,
 				9D7BBEFF272B2B27005DF690 /* UIColorExtension.swift in Sources */,
 				9D91459F26F154A400450F13 /* Hello.swift in Sources */,
 				9D9145A126F1585200450F13 /* AboutMe.swift in Sources */,
 				9DC9BCEE2708022F00875B89 /* AboutStruct.swift in Sources */,
+				9D854D8A273F7D27001F5C9D /* ModulesLandingPage.swift in Sources */,
 				9D7BBEFB272B241E005DF690 /* ColorPicker.swift in Sources */,
 				9DCAE70C272B167A00B377C0 /* MorseCodeFlasher.swift in Sources */,
 				9DFA7A7227252F56004009EA /* ArrayExtension.swift in Sources */,

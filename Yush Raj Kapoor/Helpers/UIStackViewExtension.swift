@@ -27,6 +27,13 @@ extension UIStackView {
                 let ht = sub.textHeight(withWidth: width)
                 subview.frame = CGRect(x: x, y: y, width: width, height: ht)
                 heights.append(ht)
+            } else if let sub = subview as? UIButton {
+                let lbl = sub.titleLabel
+                //equation for height = (textHeight/0.83797054) + 14
+                //Why is it so obscure? I have no frickin idea!!
+                let ht = (lbl?.text?.height(withWidth: width, font: (lbl?.font!)!) ?? 0.0) + 14
+                subview.frame = CGRect(x: x, y: y, width: width, height: ht)
+                heights.append(ht)
             } else {
                 heights.append(subview.frame.height)
             }

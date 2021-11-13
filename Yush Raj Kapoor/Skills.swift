@@ -29,11 +29,11 @@ class Skills: UIViewController {
             let stack = UIStackView()
             stack.axis = .vertical
             
-            let nameLbl = initLabel(textLbl: skill.name, size: 30)
-            let subLbl = initLabel(textLbls: skill.subunits)
-            let expLbl = initLabel(textLbl: skill.experience, size: 12, color: .secondaryLabel)
-            let spacer = initLabel(textLbl: " ", size: 8)
-            let buffer = initLabel(textLbl: " ", size: 17.5)
+            let nameLbl = UILabel().initLabel(textLbl: skill.name, size: 30)
+            let subLbl = UILabel().initLabel(textLbls: skill.subunits)
+            let expLbl = UILabel().initLabel(textLbl: skill.experience, size: 12, color: .secondaryLabel)
+            let spacer = UILabel().initLabel(textLbl: " ", size: 8)
+            let buffer = UILabel().initLabel(textLbl: " ", size: 17.5)
             
             let attributeLbl = [nameLbl, expLbl, spacer, subLbl, buffer]
             for attribute in attributeLbl {

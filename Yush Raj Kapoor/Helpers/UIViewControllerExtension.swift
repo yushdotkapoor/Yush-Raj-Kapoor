@@ -67,5 +67,27 @@ extension UIViewController {
         controller.dismiss(animated: true)
     }
     
+    func presentBasedOnText(text: String) {
+        if text.isClassProjects() {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.3, execute: { [self] in
+                tabBarController?.selectedIndex = 0
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.3, execute: {
+                    if let top = UIApplication.getTopViewController() as? Projects {
+                        print("IS WORK!!")
+                        let projectArray = top.data
+                        let tb = top.tableView
+                        for (i, proj) in (projectArray ?? []).enumerated() {
+                            if proj.name == text {
+                                let indexPath = IndexPath(row: 0, section: i)
+                                tb?.selectRow(at: indexPath, animated: true, scrollPosition: .none)
+                                tb?.delegate?.tableView!(tb!, didSelectRowAt: indexPath)
+                            }
+                        }
+                    }
+                })
+            })
+        }
+    }
+    
 }
 

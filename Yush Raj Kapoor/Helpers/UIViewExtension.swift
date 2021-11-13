@@ -37,4 +37,29 @@ extension UIView {
         }
     }
     
+    func labelSniffer() -> [UILabel] {
+        var labelToReturn:[UILabel] = [UILabel]()
+        if let lbl = self as? UILabel {
+            labelToReturn.append(lbl)
+        } else if let stck = self as? UIStackView {
+            let substack = stck.arrangedSubviews
+            for i in substack {
+                let lbls = i.labelSniffer()
+                for j in lbls {
+                    labelToReturn.append(j)
+                }
+            }
+        } else {
+            let subvus = self.subviews
+            for i in subvus {
+                let lbls = i.labelSniffer()
+                for j in lbls {
+                    labelToReturn.append(j)
+                }
+            }
+        }
+        return labelToReturn
+    }
+    
+    
 }

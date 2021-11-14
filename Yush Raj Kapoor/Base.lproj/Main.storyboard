@@ -547,19 +547,19 @@
                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="Sx7-0k-5L4">
                                                             <rect key="frame" x="120" y="19" width="204.5" height="63.5"/>
                                                             <subviews>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XT6-rO-udv">
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XT6-rO-udv">
                                                                     <rect key="frame" x="0.0" y="0.0" width="204.5" height="26.5"/>
                                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K66-E2-h9E">
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K66-E2-h9E">
                                                                     <rect key="frame" x="0.0" y="30.5" width="204.5" height="8.5"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="7"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5lO-qE-IYh">
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5lO-qE-IYh">
                                                                     <rect key="frame" x="0.0" y="43" width="204.5" height="20.5"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                     <nil key="textColor"/>
@@ -788,7 +788,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fan-4C-iHb">
-                                <rect key="frame" x="0.0" y="140" width="414" height="673"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                             </scrollView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="cw8-Tu-IFu"/>
@@ -807,7 +807,22 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="glO-el-tcb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5274" y="1146"/>
+            <point key="canvasLocation" x="5151" y="1146"/>
+        </scene>
+        <!--Speech View Controller-->
+        <scene sceneID="4Ek-tb-GsF">
+            <objects>
+                <viewController storyboardIdentifier="SpeechRecognizer" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ccD-p8-5GW" customClass="SpeechViewController" customModule="Yush_Raj_Kapoor" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xVo-EH-3yl">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="5TB-UU-smS"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1cq-NX-5km" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6064" y="1146"/>
         </scene>
         <!--Projects-->
         <scene sceneID="O48-jo-N87">
@@ -943,7 +958,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t26-cY-npc">
-                                        <rect key="frame" x="127.5" y="403" width="159" height="34.5"/>
+                                        <rect key="frame" x="127.5" y="457.5" width="159" height="34.5"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Introduction Page">
                                             <fontDescription key="titleFontDescription" type="system" pointSize="17"/>
@@ -953,7 +968,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MEs-jB-gWj">
-                                        <rect key="frame" x="147" y="457.5" width="120.5" height="34.5"/>
+                                        <rect key="frame" x="147" y="512" width="120.5" height="34.5"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="iOS Modules">
                                             <fontDescription key="titleFontDescription" type="system" pointSize="17"/>
@@ -962,13 +977,25 @@
                                             <action selector="goToModules:" destination="WvB-gj-NLr" eventType="touchUpInside" id="X5S-qI-iGF"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e7c-Es-r9X">
+                                        <rect key="frame" x="133.5" y="403" width="147.5" height="34.5"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Add to Contacts">
+                                            <fontDescription key="titleFontDescription" type="system" pointSize="17"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="addContact:" destination="WvB-gj-NLr" eventType="touchUpInside" id="cWt-m4-aDt"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <constraints>
+                                    <constraint firstItem="e7c-Es-r9X" firstAttribute="top" secondItem="1gs-0n-sf1" secondAttribute="bottom" constant="75" id="19w-Ir-nOH"/>
                                     <constraint firstItem="1gs-0n-sf1" firstAttribute="top" secondItem="1RG-et-b4Y" secondAttribute="bottom" constant="30" id="1Ub-qx-jMP"/>
+                                    <constraint firstItem="t26-cY-npc" firstAttribute="top" secondItem="e7c-Es-r9X" secondAttribute="bottom" constant="20" id="9fF-q8-UuE"/>
                                     <constraint firstItem="1RG-et-b4Y" firstAttribute="leading" secondItem="Wp3-v3-boG" secondAttribute="leading" constant="20" id="C4z-Gq-giB"/>
                                     <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="1gs-0n-sf1" secondAttribute="trailing" constant="20" id="FfJ-ad-r8J"/>
                                     <constraint firstItem="1gs-0n-sf1" firstAttribute="centerX" secondItem="Wp3-v3-boG" secondAttribute="centerX" id="K8D-H9-Xge"/>
-                                    <constraint firstItem="t26-cY-npc" firstAttribute="top" secondItem="1gs-0n-sf1" secondAttribute="bottom" constant="75" id="L13-b9-Vhb"/>
+                                    <constraint firstItem="e7c-Es-r9X" firstAttribute="centerX" secondItem="Wp3-v3-boG" secondAttribute="centerX" id="LWN-Gz-VeW"/>
                                     <constraint firstItem="3ad-4F-TVn" firstAttribute="centerX" secondItem="Wp3-v3-boG" secondAttribute="centerX" id="QMT-yr-YIQ"/>
                                     <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="MEs-jB-gWj" secondAttribute="bottom" constant="50" id="TT4-A7-CSo"/>
                                     <constraint firstItem="1RG-et-b4Y" firstAttribute="centerX" secondItem="Wp3-v3-boG" secondAttribute="centerX" id="VMq-qe-k4O"/>
@@ -993,6 +1020,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Contact Me" id="rC5-8b-TFQ"/>
                     <connections>
+                        <outlet property="addToContacts" destination="e7c-Es-r9X" id="7fR-su-YYD"/>
                         <outlet property="emailImg" destination="gEP-aO-KOX" id="cKM-b1-xfE"/>
                         <outlet property="gitImg" destination="fEj-FW-qmi" id="WEe-m8-gn9"/>
                         <outlet property="img" destination="3ad-4F-TVn" id="O70-vc-Ka5"/>
@@ -1000,7 +1028,6 @@
                         <outlet property="modules" destination="MEs-jB-gWj" id="aQ9-1U-Y5I"/>
                         <outlet property="phoneImg" destination="oiR-Gy-99x" id="iHs-Az-hRS"/>
                         <segue destination="AOx-KL-DnY" kind="presentation" identifier="backToIntro" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="kYv-np-AiX"/>
-                        <segue destination="RJ2-9j-dAA" kind="show" id="vE6-xu-F4s"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1Qm-99-2ff" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

@@ -61,5 +61,29 @@ extension UIView {
         return labelToReturn
     }
     
+    func buttonSniffer() -> [UIButton] {
+        var buttonToReturn:[UIButton] = [UIButton]()
+        if let btn = self as? UIButton {
+            buttonToReturn.append(btn)
+        } else if let stck = self as? UIStackView {
+            let substack = stck.arrangedSubviews
+            for i in substack {
+                let btns = i.buttonSniffer()
+                for j in btns {
+                    buttonToReturn.append(j)
+                }
+            }
+        } else {
+            let subvus = self.subviews
+            for i in subvus {
+                let btns = i.buttonSniffer()
+                for j in btns {
+                    buttonToReturn.append(j)
+                }
+            }
+        }
+        return buttonToReturn
+    }
+    
     
 }

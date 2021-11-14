@@ -7,6 +7,7 @@
 
 import UIKit
 import MessageUI
+import Contacts
 
 class ContactMe: UIViewController, MFMailComposeViewControllerDelegate {
     
@@ -16,6 +17,7 @@ class ContactMe: UIViewController, MFMailComposeViewControllerDelegate {
     @IBOutlet weak var gitImg: UIButton!
     @IBOutlet weak var introductionPage: UIButton!
     @IBOutlet weak var modules: UIButton!
+    @IBOutlet weak var addToContacts: UIButton!
     
     let personalInfo = PersonalInfo()
     
@@ -35,6 +37,7 @@ class ContactMe: UIViewController, MFMailComposeViewControllerDelegate {
         
         setButton(button: introductionPage)
         setButton(button: modules)
+        setButton(button: addToContacts)
     }
     
     func setButton(button:UIButton) {
@@ -73,6 +76,42 @@ class ContactMe: UIViewController, MFMailComposeViewControllerDelegate {
         vc.title = "iOS Modules"
         navigationController?.pushViewController(vc, animated: true)
     }
+    
+    @IBAction func addContact(_ sender: Any) {
+        let contact = CNMutableContact()
+        
+        contact.imageData = img.image?.pngData()
+         
+        contact.givenName = "Yush"
+        contact.middleName = "Raj"
+        contact.familyName = "Kapoor"
+        
+        let email = CNLabeledValue(label: CNLabelHome, value: personalInfo.emailAddress as NSString)
+        contact.emailAddresses = [email]
+         
+        contact.phoneNumbers = [CNLabeledValue(
+            label:CNLabelPhoneNumberiPhone,
+            value:CNPhoneNumber(stringValue:personalInfo.phoneNumber))]
+         
+        let store = CNContactStore()
+        let saveRequest = CNSaveRequest()
+        saveRequest.add(contact, toContainerWithIdentifier:nil)
+        do {
+        try store.execute(saveRequest)
+            let alertController = UIAlertController(title: "Success", message: "Yush's contact saved successfully.", preferredStyle: .alert)
+            let dismiss = UIAlertAction(title: "Dismiss", style: .default, handler: nil)
+           
+            alertController.addAction(dismiss)
+            self.present(alertController, animated: true, completion: nil)
+        } catch let error {
+            let alertController = UIAlertController(title: "Error", message: "Error in saving contact: \(error)", preferredStyle: .alert)
+            let dismiss = UIAlertAction(title: "Dismiss", style: .default, handler: nil)
+           
+            alertController.addAction(dismiss)
+            self.present(alertController, animated: true, completion: nil)
+        }
+    }
+    
     
     
 }

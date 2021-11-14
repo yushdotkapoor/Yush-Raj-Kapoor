@@ -17,3 +17,11 @@ extension Array where Element == CGFloat {
         return sum
     }
 }
+
+extension Array where Element == Substring {
+    func allButFirst() -> String {
+        var strArr = self
+        strArr.removeLast()
+        return strArr.joined(separator: "")
+    }
+}

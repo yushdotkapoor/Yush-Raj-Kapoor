@@ -14,7 +14,6 @@ class About: UIViewController {
     
     let textFieldHeightConstant = 0.8379705401
     
-   
     var masterLabels:[UILabel] = []
     
     override func viewDidLoad() {
@@ -94,7 +93,7 @@ class About: UIViewController {
         masterLabels = masterStack.labelSniffer()
         for i in masterLabels {
             i.addAttribution()
-            if i.containKeyWords() != "" {
+            if i.containKeyWords() != [] {
                 i.addGestureRecognizer(UITapGestureRecognizer(target:self, action: #selector(tapLabel(gesture:))))
             }
         }
@@ -106,11 +105,12 @@ class About: UIViewController {
             guard let lblText = i.text else {
                 continue
             }
-            let containsString = i.containKeyWords()
-            if containsString != "" {
-                let textRange = (lblText as NSString).range(of: containsString)
+            let strings = i.containKeyWords()
+            for j in strings {
+                let textRange = (lblText as NSString).range(of: j)
                 if gesture.didTapAttributedTextInLabel(label: i, inRange: textRange) {
-                    presentBasedOnText(text: containsString)
+                    impact(style: .medium)
+                    presentBasedOnText(text: j)
                 }
             }
         }
@@ -184,7 +184,6 @@ class About: UIViewController {
         titleStack.refactor(withWidth: width)
         
         let descLbl = UILabel().initLabel(textLbl: description)
-        
         
         let mediaStack = createImageStack(media: media)
         
@@ -295,6 +294,4 @@ class About: UIViewController {
             }
         }
     }
-    
-    
 }

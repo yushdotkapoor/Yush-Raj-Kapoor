@@ -68,25 +68,89 @@ extension UIViewController {
     }
     
     func presentBasedOnText(text: String) {
-        if text.isClassProjects() {
-            DispatchQueue.main.asyncAfter(deadline: .now() + 0.3, execute: { [self] in
-                tabBarController?.selectedIndex = 0
-                DispatchQueue.main.asyncAfter(deadline: .now() + 0.3, execute: {
-                    if let top = UIApplication.getTopViewController() as? Projects {
-                        print("IS WORK!!")
-                        let projectArray = top.data
-                        let tb = top.tableView
-                        for (i, proj) in (projectArray ?? []).enumerated() {
-                            if proj.name == text {
-                                let indexPath = IndexPath(row: 0, section: i)
-                                tb?.selectRow(at: indexPath, animated: true, scrollPosition: .none)
-                                tb?.delegate?.tableView!(tb!, didSelectRowAt: indexPath)
-                            }
-                        }
+        
+        
+        if text.isClassModules() {
+            let mods = ModulesData.shared.modules
+            for i in mods {
+                let tags = i.tags
+                for j in tags {
+                    if j == text {
+                        let vc = UIStoryboard(name:"Main", bundle:nil).instantiateViewController(identifier: i.storyboardIdentifier)
+                        navigationController?.pushViewController(vc, animated: true)
                     }
-                })
-            })
+                }
+            }
+        } else if text.isClassProjects() {
+            let projs = ProjectsData.shared.projects
+            
+            for i in projs {
+                if i.name == text {
+                    let vc = UIStoryboard(name:"Main", bundle:nil).instantiateViewController(identifier: "ProjectsLandingPage") as ProjectsLandingPage
+                    vc.textDesc = i.longDescription
+                    vc.textSkills = i.skillsUsed
+                    vc.textChallenges = i.challenges
+                    vc.textFeatures = i.features
+                    vc.textLanguages = i.languages
+                    vc.urls = i.urls
+                    vc.thumbs = i.thumbnails
+                    vc.iconName = i.appIconName
+                    vc.title =  i.name
+                    navigationController?.pushViewController(vc, animated: true)
+                }
+            }
         }
+        
+        
+        
+        
+        
+//        if text.isClassProjects() {
+//            DispatchQueue.main.asyncAfter(deadline: .now() + 0.3, execute: { [self] in
+//                tabBarController?.selectedIndex = 0
+//                DispatchQueue.main.asyncAfter(deadline: .now() + 0.2, execute: {
+//                    if let top = UIApplication.getTopViewController() as? Projects {
+//                        print("IS WORK!!")
+//                        let projectArray = top.data
+//                        let tb = top.tableView
+//                        for (i, proj) in (projectArray ?? []).enumerated() {
+//                            if proj.name == text {
+//                                let indexPath = IndexPath(row: 0, section: i)
+//                                tb?.selectRow(at: indexPath, animated: true, scrollPosition: .none)
+//                                tb?.delegate?.tableView!(tb!, didSelectRowAt: indexPath)
+//                            }
+//                        }
+//                    }
+//                })
+//            })
+//        } else if text.isClassModules() {
+//            DispatchQueue.main.asyncAfter(deadline: .now() + 0.3, execute: { [self] in
+//                tabBarController?.selectedIndex = 3
+//                DispatchQueue.main.asyncAfter(deadline: .now() + 0.2, execute: {
+//                    if let top = UIApplication.getTopViewController() as? ContactMe {
+//                        top.goToModules(self)
+//                        if let secondTop = UIApplication.getTopViewController() as? ModulesLandingPage {
+//                            let mods = secondTop.modules
+//                            let buttons = secondTop.view.buttonSniffer()
+//                            for i in mods {
+//                                let tags = i.tags
+//                                for j in tags {
+//                                    if j == text {
+//                                        for k in buttons {
+//                                            if k.title(for: .normal) == i.buttonText {
+//                                                k.sendActions(for: .touchUpInside)
+//                                            }
+//                                        }
+//                                    }
+//                                }
+//                            }
+//                        }
+//                    }
+//                })
+//            })
+//        }
+        
+        
     }
     
 }

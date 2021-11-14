@@ -48,6 +48,12 @@
 		9DC9BCEF2708022F00875B89 /* About.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC9BCED2708022F00875B89 /* About.swift */; };
 		9DC9BCF127095BF100875B89 /* AboutData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC9BCF027095BF100875B89 /* AboutData.swift */; };
 		9DCAE70C272B167A00B377C0 /* MorseCodeFlasher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DCAE70B272B167A00B377C0 /* MorseCodeFlasher.swift */; };
+		9DE655EF27404F36008EE7DD /* speechModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DE655EE27404F36008EE7DD /* speechModule.swift */; };
+		9DE655F127404F5C008EE7DD /* speechViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DE655F027404F5C008EE7DD /* speechViewController.swift */; };
+		9DE655F327405399008EE7DD /* Bleep.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9DE655F227405399008EE7DD /* Bleep.mp3 */; };
+		9DE655F52740BD8F008EE7DD /* ModulesStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DE655F42740BD8F008EE7DD /* ModulesStruct.swift */; };
+		9DE655F92740BE5D008EE7DD /* ModulesData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DE655F82740BE5D008EE7DD /* ModulesData.swift */; };
+		9DE655FB2740C972008EE7DD /* Tags.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DE655FA2740C972008EE7DD /* Tags.swift */; };
 		9DFA7A6E27252EF9004009EA /* UIStackViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DFA7A6D27252EF9004009EA /* UIStackViewExtension.swift */; };
 		9DFA7A7227252F56004009EA /* ArrayExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DFA7A7127252F56004009EA /* ArrayExtension.swift */; };
 /* End PBXBuildFile section */
@@ -93,6 +99,12 @@
 		9DC9BCED2708022F00875B89 /* About.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = About.swift; sourceTree = "<group>"; };
 		9DC9BCF027095BF100875B89 /* AboutData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutData.swift; sourceTree = "<group>"; };
 		9DCAE70B272B167A00B377C0 /* MorseCodeFlasher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MorseCodeFlasher.swift; sourceTree = "<group>"; };
+		9DE655EE27404F36008EE7DD /* speechModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = speechModule.swift; sourceTree = "<group>"; };
+		9DE655F027404F5C008EE7DD /* speechViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = speechViewController.swift; sourceTree = "<group>"; };
+		9DE655F227405399008EE7DD /* Bleep.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Bleep.mp3; sourceTree = "<group>"; };
+		9DE655F42740BD8F008EE7DD /* ModulesStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModulesStruct.swift; sourceTree = "<group>"; };
+		9DE655F82740BE5D008EE7DD /* ModulesData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModulesData.swift; sourceTree = "<group>"; };
+		9DE655FA2740C972008EE7DD /* Tags.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tags.swift; sourceTree = "<group>"; };
 		9DFA7A6D27252EF9004009EA /* UIStackViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIStackViewExtension.swift; sourceTree = "<group>"; };
 		9DFA7A7127252F56004009EA /* ArrayExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -159,6 +171,9 @@
 				9D854D89273F7D27001F5C9D /* ModulesLandingPage.swift */,
 				9DCAE70B272B167A00B377C0 /* MorseCodeFlasher.swift */,
 				9D7BBEFA272B241E005DF690 /* ColorPicker.swift */,
+				9DE655F42740BD8F008EE7DD /* ModulesStruct.swift */,
+				9DE655F82740BE5D008EE7DD /* ModulesData.swift */,
+				9DE655ED27404F1C008EE7DD /* Speech Recognizer */,
 			);
 			name = Modules;
 			sourceTree = "<group>";
@@ -215,6 +230,7 @@
 				9D7BBEFE272B2B27005DF690 /* UIColorExtension.swift */,
 				9D357EDE273F5CF6002F4C91 /* UITapGestureRecognizer.swift */,
 				9D357EE0273F7654002F4C91 /* UIApplication.swift */,
+				9DE655FA2740C972008EE7DD /* Tags.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -237,6 +253,16 @@
 				9DC9BCF027095BF100875B89 /* AboutData.swift */,
 			);
 			name = About;
+			sourceTree = "<group>";
+		};
+		9DE655ED27404F1C008EE7DD /* Speech Recognizer */ = {
+			isa = PBXGroup;
+			children = (
+				9DE655EE27404F36008EE7DD /* speechModule.swift */,
+				9DE655F027404F5C008EE7DD /* speechViewController.swift */,
+				9DE655F227405399008EE7DD /* Bleep.mp3 */,
+			);
+			name = "Speech Recognizer";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -305,6 +331,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9D91458F26F0F03200450F13 /* LaunchScreen.storyboard in Resources */,
+				9DE655F327405399008EE7DD /* Bleep.mp3 in Resources */,
 				9D9E950F272CA4EC000DB25E /* GoogleService-Info.plist in Resources */,
 				9D91458C26F0F03200450F13 /* Assets.xcassets in Resources */,
 				9D91458A26F0F02F00450F13 /* Main.storyboard in Resources */,
@@ -324,6 +351,8 @@
 				9DC9BCE62707783C00875B89 /* SkillsStruct.swift in Sources */,
 				9D91459926F0F5BC00450F13 /* MainScreen.swift in Sources */,
 				9D357EDF273F5CF6002F4C91 /* UITapGestureRecognizer.swift in Sources */,
+				9DE655F127404F5C008EE7DD /* speechViewController.swift in Sources */,
+				9DE655F52740BD8F008EE7DD /* ModulesStruct.swift in Sources */,
 				9DB1640126FD7332000F7E1C /* StringExtension.swift in Sources */,
 				9D91459D26F14AB900450F13 /* IntroPageView.swift in Sources */,
 				9D357EE1273F7654002F4C91 /* UIApplication.swift in Sources */,
@@ -338,6 +367,7 @@
 				9DFA7A7227252F56004009EA /* ArrayExtension.swift in Sources */,
 				9D91458526F0F02F00450F13 /* SceneDelegate.swift in Sources */,
 				9D7BBEFD272B2645005DF690 /* CALayerExtension.swift in Sources */,
+				9DE655FB2740C972008EE7DD /* Tags.swift in Sources */,
 				9D36568626FFA1D300BC4E6F /* Skills.swift in Sources */,
 				9D36568D26FFA76700BC4E6F /* ProjectsTableViewCell.swift in Sources */,
 				9D7C2A8627040FCF00F9B81E /* ProjectsLandingPage.swift in Sources */,
@@ -350,10 +380,12 @@
 				9D7C2A8A270430A100F9B81E /* NSMutableAttributedStringExtension.swift in Sources */,
 				9D36568426FFA1B900BC4E6F /* Projects.swift in Sources */,
 				9DB163FF26FD731D000F7E1C /* UILabelExtension.swift in Sources */,
+				9DE655EF27404F36008EE7DD /* speechModule.swift in Sources */,
 				9D9F36322706683600F81EA9 /* UIViewExtension.swift in Sources */,
 				9D36569126FFAB2500BC4E6F /* ProjectsStruct.swift in Sources */,
 				9D91459B26F1416100450F13 /* global.swift in Sources */,
 				9DC9BCF127095BF100875B89 /* AboutData.swift in Sources */,
+				9DE655F92740BE5D008EE7DD /* ModulesData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

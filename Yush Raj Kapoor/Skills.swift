@@ -14,6 +14,8 @@ class Skills: UIViewController {
     
     var skills = SkillsData.shared.skills
     
+    var masterLabels:[UILabel] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpLabels()
@@ -53,12 +55,38 @@ class Skills: UIViewController {
             stackView.addArrangedSubview(stack)
         }
         addSpacer()
+        
+        masterLabels = stackView.labelSniffer()
+        for i in masterLabels {
+            i.addAttribution()
+            if i.containKeyWords() != [] {
+                i.addGestureRecognizer(UITapGestureRecognizer(target:self, action: #selector(tapLabel(gesture:))))
+            }
+        }
     }
     
     func addSpacer() {
         stackView.addArrangedSubview(UIView(frame: CGRect(x: 0, y: 0, width: CGFloat(), height: 10)))
     }
     
+    
+    @objc func tapLabel(gesture: UIGestureRecognizer) {
+        for i in masterLabels {
+            guard let lblText = i.text?.lowercased() else {
+                continue
+            }
+            
+            let strings = i.containKeyWords()
+            for j in strings {
+                let textRange = (lblText as NSString).range(of: j.lowercased())
+                
+                if gesture.didTapAttributedTextInLabel(label: i, inRange: textRange) {
+                    impact(style: .medium)
+                    presentBasedOnText(text: j)
+                }
+            }
+        }
+    }
     
     
 }

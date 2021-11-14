@@ -13,8 +13,7 @@ class ModulesLandingPage:UIViewController {
     
     @IBOutlet weak var scrollView: UIScrollView!
     
-    var modules = ["MorseCodeFlasher", "ColorPicker"]
-    var readableModules = ["Morse Code Flasher", "Camera Color Picker"]
+    var modules = ModulesData.shared.modules
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,12 +27,12 @@ class ModulesLandingPage:UIViewController {
         generalStack.spacing = 20
         generalStack.distribution = .fillProportionally
         
-        for (ind, i) in modules.enumerated() {
+        for i in modules {
             let button = UIButton()
-            button.setTitle(readableModules[ind], for: .normal)
+            button.setTitle(i.buttonText, for: .normal)
             setButton(button: button)
             button.addAction(UIAction(handler: { [self] _ in
-                goToModule(moduleID: i)
+                goToModule(moduleID: i.storyboardIdentifier)
             }), for: .touchUpInside)
             generalStack.addArrangedSubview(button)
         }

@@ -149,8 +149,7 @@ extension String {
     func isClassProjects() -> Bool {
         let projectData = ProjectsData.shared.projects
         for i in projectData {
-            let n = i.name
-            if contains(n) {
+            if contains(i.name) {
                 return true
             }
         }
@@ -158,11 +157,12 @@ extension String {
     }
     
     func isClassModules() -> Bool {
-        let skillData = SkillsData.shared.skills
-        for i in skillData {
-            let n = i.name
-            if contains(n) {
-                return true
+        let modulesData = ModulesData.shared.modules
+        for i in modulesData {
+            for j in i.tags {
+                if contains(j) {
+                    return true
+                }
             }
         }
         return false

@@ -22,7 +22,7 @@ extension UILabel {
         }
         return text.width(withHeight: height, font: font)
     }
-
+    
     func attributedTextHeight(withWidth width: CGFloat) -> CGFloat {
         guard let attributedText = attributedText else {
             return 0
@@ -39,7 +39,7 @@ extension UILabel {
         self.text = textLbl
         return self
     }
-
+    
     //initializes label with an array to form bullet point style text
     func initLabel(textLbls:[String], size:CGFloat=17, color:UIColor=UIColor.label, textAlignment:NSTextAlignment=NSTextAlignment.left) -> UILabel {
         let text = formatBullets(arr: textLbls)
@@ -48,52 +48,42 @@ extension UILabel {
     
     //Adds attributed buttons as needed
     func addAttribution() {
-        guard let t = text else {
+        guard var t = text else {
             print("NO TEXT IN UILABEL - CANNOT ADD ATTRIBUTION")
             return
         }
-        
         let underlineAttriString = NSMutableAttributedString(string: t)
         
-        let projectData = ProjectsData.shared.projects
-        for i in projectData {
-            let projectTitle = i.name
-            if t.contains(projectTitle) {
-                let rangeOfText = (t as NSString).range(of: projectTitle)
+        t = t.lowercased()
+        
+        for i in Tags.shared.tags {
+            let targetTag = i.lowercased()
+            if t.contains(targetTag) {
+                let rangeOfText = (t as NSString).range(of: targetTag)
+                
                 underlineAttriString.addAttribute(NSAttributedString.Key.underlineStyle, value: NSUnderlineStyle.single.rawValue, range: rangeOfText)
                 underlineAttriString.addAttribute(NSAttributedString.Key.foregroundColor, value: UIColor.systemBlue, range: rangeOfText)
             }
         }
-       
+        
         self.attributedText = underlineAttriString
+        print(underlineAttriString)
         self.isUserInteractionEnabled = true
     }
     
-    func containKeyWords() -> String {
+    func containKeyWords() -> [String] {
         guard let t = text else {
             print("NO TEXT IN UILABEL - CANNOT ADD ATTRIBUTION")
-            return ""
+            return []
         }
+        var keyWords:[String] = []
         
-        let projectData = ProjectsData.shared.projects
-        let skillData = SkillsData.shared.skills
-        
-        var fullList:[String] = []
-        
-        projectData.forEach({ project in
-            fullList.append(project.name)
-        })
-        
-        skillData.forEach({ skill in
-            fullList.append(skill.name)
-        })
-        
-        for i in fullList {
-            if t.contains(i) {
-                return i
+        for i in Tags.shared.tags {
+            if t.lowercased().contains(i.lowercased()) {
+                keyWords.append(i)
             }
         }
-        return ""
+        return keyWords
     }
 }
 
